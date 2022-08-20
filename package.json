@@ -5,14 +5,20 @@
 	"scripts": {
 		"main": "sass --watch src:docs/css --style compressed & webpack --watch"
 	},
-	"keywords": ["mrboomdev", "site", "js", "webpack"],
+	"keywords": [
+		"mrboomdev",
+		"site",
+		"js",
+		"webpack"
+	],
 	"author": "MrBoomDev",
 	"license": "ISC",
 	"devDependencies": {
 		"webpack": "^5.4.0",
-    	"webpack-cli": "^4.2.0"
+		"webpack-cli": "^4.2.0"
 	},
 	"dependencies": {
+		"@lottiefiles/lottie-player": "^1.5.7",
 		"boomutil": "^1.0.4"
 	}
 }

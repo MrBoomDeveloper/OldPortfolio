@@ -1,0 +1,35 @@
+.block {
+	> .content {
+		margin-bottom: 5rem;
+		padding: 1rem;
+		display: grid;
+		grid-template-columns: 1fr 20rem;
+	}
+	.cat {
+		color: var(--category);
+		margin-bottom: .5em;
+		
+		&::before {
+			display: inline-block;
+			content: "";
+			width: .3em;
+			height: 1em;
+			margin-right: .5em;
+			border-radius: 1px;
+			transform: translateY(.1em);
+			background-color: var(--primary);
+		}
+	}
+	
+	p {
+		line-height: 1.7;
+		font-size: 1.02em;
+	}
+
+	&.thicc .content { grid-template-columns: 1fr }
+
+	&.swap {
+		.content { grid-template-columns: 20rem 1fr }
+		lottie-player { margin-top: 0 }
+	}
+}

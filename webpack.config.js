@@ -7,5 +7,5 @@ module.exports = {
 		path: path.resolve(__dirname, 'docs/js'),
 		clean: true
 	},
-	mode: 'development'
+	mode: 'production'
 };

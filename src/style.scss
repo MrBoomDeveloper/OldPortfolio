@@ -1,3 +1,21 @@
-* {
-	color: red;
+@import "../node_modules/boomutil/index";
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined";
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap";
+
+@import "scss/header", "scss/hero", "scss/block";
+
+:root {
+	//TODO: change this value in the library
+	--primary: #D92FFF;
+}
+
+.reveal1 {
+	opacity: 0;
+	transform: translateY(1rem);
+	transition: 1s;
+}
+
+.revealed1 {
+	transform: translateY(0);
+	opacity: 1;
 }
