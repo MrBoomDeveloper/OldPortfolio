@@ -1,4 +1,4 @@
-import { el } from "boomutil/js/general"
+import { el } from "boomutil"
 
 export default function setupHeader(scroller, burger) {
 	if(scroller) headerScroller()
@@ -11,6 +11,12 @@ function headerBurger() {
 			this.innerHTML = "<span></span><span></span><span></span>"
 			this.onclick = () => {
 				this.classList.toggle("active")
+				const nav = el("header nav")
+				nav.classList.toggle("active")
+				if(this.active) {
+					const headerHeight = el("header").offsetHeight
+					nav.style.transform = `translateY(${headerHeight}px)`
+				}
 			}
 		}
 		get active() {

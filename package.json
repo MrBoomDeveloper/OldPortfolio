@@ -19,6 +19,6 @@
 	},
 	"dependencies": {
 		"@lottiefiles/lottie-player": "^1.5.7",
-		"boomutil": "^1.0.4"
+		"boomutil": "^1.0.6"
 	}
 }
