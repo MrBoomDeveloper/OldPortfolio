@@ -16,6 +16,9 @@ function headerBurger() {
 				if(this.active) {
 					const headerHeight = el("header").offsetHeight
 					nav.style.transform = `translateY(${headerHeight}px)`
+				} else {
+					const headerHeight = el("header").offsetHeight
+					nav.style.transform = `translateY(-100%)`
 				}
 			}
 		}

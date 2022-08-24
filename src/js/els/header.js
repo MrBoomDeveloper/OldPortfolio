@@ -7,9 +7,9 @@ export default class Header extends HTMLElement {
 					<boom-burger></boom-burger>
 					<nav>
 						<ul class="content">
-							<li><a href="./#aboutme">Обо мне</a></li>
-							<li><a href="./#projects">Проекты</a></li>
-							<li><a href="./#contact">Связаться</a></li>
+							<li><a href="#aboutme">Обо мне</a></li>
+							<li><a href="#projects">Проекты</a></li>
+							<li><a href="#contact">Связаться</a></li>
 						</ul>
 					<nav>
 				</div>

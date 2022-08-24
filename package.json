@@ -1,15 +1,16 @@
 {
 	"name": "portfolio",
 	"version": "1.0.0",
-	"description": "",
+	"description": "README.md",
 	"scripts": {
-		"main": "sass --watch src:docs/css --style compressed & webpack --watch"
+		"main": "sass --watch src:docs/css --style compressed & webpack --watch",
+		"sass": "sass --watch src:docs/css --style compressed",
+		"js": "webpack --watch"
 	},
 	"keywords": [
-		"mrboomdev",
-		"site",
-		"js",
-		"webpack"
+		"mrboomdev", "site",
+		"js", "webpack",
+		"scss", "sass", "css"
 	],
 	"author": "MrBoomDev",
 	"license": "ISC",
@@ -18,7 +19,6 @@
 		"webpack-cli": "^4.2.0"
 	},
 	"dependencies": {
-		"@lottiefiles/lottie-player": "^1.5.7",
 		"boomutil": "^1.0.6"
 	}
 }

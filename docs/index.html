@@ -17,20 +17,8 @@
 	</head>
 	<body>
 		<div id="app">
-			<header>
-				<div class="content reveal">
-					<h2>MrBoomDev</h2>
-					<boom-burger></boom-burger>
-					<nav>
-						<ul class="content">
-							<li><a href="#aboutme">Обо мне</a></li>
-							<li><a href="#projects">Проекты</a></li>
-							<li><a href="#contact">Связаться</a></li>
-						</ul>
-					<nav>
-				</div>
-			</header>
-			
+			<site-header></site-header>
+
 			<main>
 				<div class="content">
 					<section id="hero">
@@ -48,20 +36,32 @@
 				
 				<section id="skills" class="block swap reveal">
 					<div class="content">
-						<div></div>
+						<lottie-player src="https://assets7.lottiefiles.com/animated_stickers/lf_tgs_emn0iC.json" loop autoplay></lottie-player>
 						<div class="text">
 							<h2 class="cat">Мои Навыки</h2>
 							<div class="grid">
-								<boom-item title="Sass" icon="img/icon/sass.svg" type="padding" class="reveal1"></boom-item>
-								<card-icon icon="./img/icon/sass.svg" title="Sass"></card-icon>
+								<boom-item title="Firebase" icon="./img/icon/firebase.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="Java" icon="./img/icon/java.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="Android" icon="./img/icon/android.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="Webpack" icon="./img/icon/webpack.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="NodeJS" icon="./img/icon/node.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="JavaScript" icon="./img/icon/js.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="Sass" icon="./img/icon/sass.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="CSS" icon="./img/icon/css.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="HTML" icon="./img/icon/html.svg" type="card" class="reveal"></boom-item>
 							</div>
 						</div>
 					</div>
 				</section>
 				
+				<test-test>
+					<p>Hello World!</p>
+				</test-test>
+				
 				<section id="projects" class="block thicc reveal">
 					<div class="content">
 						<h2 class="cat">Проекты</h2>
+						<button neon>openProject(0);</button>
 					</div>
 				</section>
 				
@@ -73,12 +73,21 @@
 				
 				<section id="contact" class="block reveal">
 					<div class="content">
-						<h2 class="cat">Связаться со мной</h2>
+						<div class="text">
+							<h2 class="cat">Связаться со мной</h2>
+							<p class="mobile-description">Если у тебя есть какие-либо вопросы или хочешь со мной поработать, то смело пиши мне! Отвечу в течение недели!</p>
+							<form action="https://send.pageclip.co/VoMFoh1dOuY1FWGpkTJQacY4vVmrSxUa" method="post" class="reveal">
+								<input neon type="text" name="name" placeholder="Имя" required/>
+								<input neon type="email" name="email" placeholder="Почта" required/>
+								<textarea neon name="body" placeholder="Текст письма" required></textarea>
+								<button neon type="submit">Отправить</button>
+							</form>
+						</div>
+						<lottie-player class="small-lottie" src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
 					</div>
 				</section>
 			</main>
-			
-			<lottie-player class="small-lottie" src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
+		
 			<site-footer></site-footer>
 		</div>
 		<script async src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>

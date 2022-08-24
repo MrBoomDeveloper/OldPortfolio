@@ -2,4 +2,10 @@
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined";
 @import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap";
 
-@import "scss/header", "scss/footer", "scss/hero", "scss/block";
+@import "scss/header", "scss/footer", 
+	"scss/block", 
+	"scss/home/hero", "scss/home/contact";
+	
+button {
+	font-size: 1.1em;
+}

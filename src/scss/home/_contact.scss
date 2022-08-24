@@ -1,0 +1,76 @@
+#contact {
+	margin-bottom: 0;
+	background-color: rgb(0 0 0 / .08);
+	
+	lottie-player {
+		width: 19rem;
+		margin-top: 0;
+	}
+	
+	input, textarea, button, p {
+		width: min(20rem, 100%);
+		
+		&::placeholder {
+			color: rgb(200 200 200 / .5);
+		}
+	}
+	
+	textarea {
+		min-height: 5rem;
+	}
+		
+	button {
+		margin-top: .5rem;
+	}
+	
+	form {
+		margin-block: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: .6rem;
+	}
+	
+	.content {
+		align-items: flex-end;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	
+	.cat {
+		margin-bottom: 1em;
+	}
+}
+
+@media (min-width: 750px) {
+	#contact {
+		.content {
+			grid-template-columns: 1fr 1fr;
+		}
+		
+		.mobile-description {
+			display: none;
+		}
+		
+		lottie-player {
+			width: min(25rem, 100%)
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	#contact {
+		padding-top: 2rem;
+		
+		.cat {
+			margin-bottom: .6em;
+		}
+		
+		input, textarea, button, p {
+			width: 100%;
+		}
+		
+		lottie-player {
+			width: min(20rem, 75%);
+		}
+	}
+}

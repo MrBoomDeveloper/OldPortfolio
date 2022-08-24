@@ -8,7 +8,7 @@ export default class Footer extends HTMLElement {
 						<li><a href="404.html">Политика Конфиденциальности</a></li>
 						<li><a href="404.html">Пользовательское Соглашение</a></li>
 					</ul>
-					<h3>Загляните в мои соц-сети</h3>
+					<h3>Посетите мои соц-сети</h3>
 					<ul class="social">
 						<li><a href="https://bit.ly/mrboomdevvk"><img src="./img/icon/vk.png"></a></li>
 						<li><a href="https://bit.ly/mrboomdevyt"><img src="./img/icon/yt.png"></a></li>
