@@ -5,22 +5,6 @@
 		display: grid;
 		grid-template-columns: 1fr 20rem;
 	}
-	.cat {
-		color: $title;
-		font-size: 1.6em;
-		margin-bottom: .5em;
-		
-		&::before {
-			display: inline-block;
-			content: "";
-			width: .3em;
-			height: 1em;
-			margin-right: .5em;
-			border-radius: 1px;
-			transform: translateY(.2em);
-			background-color: $primary;
-		}
-	}
 	
 	lottie-player {
 		width: 19rem;

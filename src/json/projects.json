@@ -1,0 +1,73 @@
+{
+	"list": {
+		"studio": {
+			"title": "BoomStudio",
+			"tags": ["Java", "Android"],
+			"link": "https://nightly.link/MrBoomDeveloper/BoomStudio/workflows/android/master/app-debug.apk.zip",
+			"description": "Мобильный редактор кода, позволяющий использовать систему контроля версий. В данный момент в стадии замедленной разработки.<br>Во время разработки был упор на мультизадачность. Это значит что в боковом меню одновременно будут показаны все папки и файлы открытого проекта. Сверху кода распологаются кнопки быстрого действия, а под ними открытые в данный момент файлы."
+		},
+		
+		"fnafm": {
+			"title": "FNaF Multiplayer",
+			"tags": ["Java", "Firebase", "Android"], 
+			"link": "https://gamejolt.com/games/fnafmultiplayer/670228",
+			"description": "Вступите в борьбу с одержимыми аниматронными машинами. Захватывающая мобильная игра в жанре экшн-платформер с любимыми персонажами.<br>- Ключевые особенности:<br>• Множество различных скинов, бустов и умений<br>• Захватывающий геймплей с игроками со всего мира<br>• Создавайте и настраивайте своего аниматроника."
+		},
+		
+		"kitchen": {
+			"title": "Bear's Kitchen",
+			"tags": ["Pocket Code", "Android"], 
+			"link": "https://gamejolt.com/games/PizzaAndroid/401141",
+			"description": "Не желаете ли вы устроиться в нашей пиццерии? У нас бесплатная пицца для сотрудников!"
+		},
+		
+		"granny": {
+			"title": "Granny 2D",
+			"tags": ["Pocket Code", "Android"],
+			"link": "https://share.catrob.at/app/project/77618"
+		},
+		
+		"fnaf7": {
+			"title": "Five Nights at Freddy's 7",
+			"tags": ["Pocket Code", "Android"],
+			"link": "https://share.catrob.at/app/project/57826"
+		},
+		
+		"sniff": {
+			"title": "FNaF Sniffing Simulator", 
+			"tags": ["Java", "Android"],
+			"link": "https://gamejolt.com/games/sniffsimandroid/504854"
+		},
+		
+		"fnafar": {
+			"title": "FNaF Non-AR",
+			"tags": ["Java", "Firebase", "Android"],
+			"link": "https://gamejolt.com/games/fnafnonar/462486"
+		},
+		
+		"fnaf48": {
+			"title": "FNaF 4: 8 Bit Remake",
+			"tags": ["Pocket Code", "Android"],
+			"link": "https://share.catrob.at/app/project/93902"
+		},
+		
+		"site2": {
+			"title": "Сайт для Ultimate Custom Night Meme Edition", 
+			"tags": ["HTML", "CSS", "JS"],
+			"link": "https://mrboom1.gamejolt.io/ucnmeme"
+		},
+		
+		"site1": {
+			"title": "Мой самый первый сайт",
+			"tags": ["HTML", "CSS"],
+			"link": "https://mrboom1.gamejolt.io"
+		}
+	},
+
+	"featured": {
+		"Лучшие": ["fnafm", "studio", "kitchen"],
+		"Игры": ["fnafm", "kitchen", "fnafar", "granny", "fnaf48", "fnaf7", "sniff"],
+		"Приложения": ["studio"],
+		"Сайты": ["site2", "site1"]
+	}
+}

@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"description": "README.md",
 	"scripts": {
-		"main": "sass --watch src:docs/css --style compressed & webpack --watch",
-		"sass": "sass --watch src:docs/css --style compressed",
+		"main": "sass --watch src/scss:docs/css --style compressed & webpack --watch",
+		"sass": "sass --watch src/scss:docs/css --style compressed",
 		"js": "webpack --watch"
 	},
 	"keywords": [

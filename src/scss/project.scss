@@ -1,0 +1,54 @@
+@import "style";
+@import "project/banner",
+	"project/actions";
+
+#app-holder {
+	height: 100%;
+	position: relative;
+	overflow: scroll;
+	
+	h1 {
+		font-size: 2.4em;
+	}
+	
+	#meta {
+		margin-block: .6rem 1.4rem;
+		display: flex;
+		align-items: center;
+		gap: .2rem;
+		color: #DEDEDE;
+		
+		.material-symbols-outlined {
+			transform: translateY(-.02em);
+			font-size: 1.4em;
+		}
+		
+		:not(.material-symbols-outlined):not(.exclude) {
+			margin-right: 1em;
+		}
+	}
+	
+	#about {
+		width: 100%;
+		position: absolute;
+		margin-top: 70vh;
+		top: 0;
+	}
+}
+
+@media (min-width: 750px) {
+	#about > .content {
+		display: grid;
+		grid-template-columns: 1fr 20rem;
+	}
+}
+
+@media (max-width: 750px) {
+	#about #main {
+		text-align: center;
+	}
+	
+	#meta {
+		justify-content: center;
+	}
+}

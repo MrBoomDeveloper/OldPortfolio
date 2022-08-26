@@ -1,0 +1,22 @@
+@import "../../node_modules/boomutil/index";
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined";
+@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap";
+
+@import "general/header", "general/footer", "layout/header";
+
+.cat {
+	color: $title;
+	font-size: 1.6em;
+	margin-bottom: .5em;
+
+	&::before {
+		display: inline-block;
+		content: "";
+		width: .6ch;
+		height: 2ch;
+		margin-right: 1ch;
+		border-radius: 1px;
+		transform: translateY(.4ch);
+		background-color: $primary;
+	}
+}

@@ -1,0 +1,17 @@
+@import "style",
+	"general/block",
+	"home/hero", "home/contact";
+
+boom-item {
+	&[type=chip] > div {
+		display: flex;
+		flex-direction: row;
+		padding: 1rem;
+		justify-content: center;
+		
+		h6 {
+			font-size: 1em;
+			font-weight: 500;
+		}
+	}
+}
