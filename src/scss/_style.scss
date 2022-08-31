@@ -4,6 +4,10 @@
 
 @import "general/footer", "layout/header";
 
+#app {
+	min-height: 100%;
+}
+
 .cat {
 	color: $title;
 	font-size: 1.6em;

@@ -58,9 +58,12 @@ export function fadeHeader(view) {
 	rootView = view;
 	if (view.scrollTop > 10) {
 		headerBack.classList.add("shadow");
+		console.log("add header shadow");
 	} else {
-		if(!headerActive)
+		if(!headerActive) {
 			headerBack.classList.remove("shadow");
+			console.log("remove header shadow");
+		}
 	}
 }
 
