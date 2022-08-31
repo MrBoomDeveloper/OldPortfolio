@@ -1,3 +1,145 @@
 boom-header {
+	h2 {
+		color: $primary;
+		display: inline;
+	}
 	
+	#headerLayout {
+		display: flex;
+		justify-content: center;
+		height: 4rem;
+		z-index: 900;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		transition: 1s, background-color .2s;
+		
+		&.shadow {
+			background-color: rgb(17 7 31 / .9);
+		}
+	}
+	
+	.items {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		pointer-events: none;
+		
+		.content {
+			display: flex;
+			align-items: center;
+		}
+		
+		a {
+			font-family: "Roboto", sans-serif;
+			pointer-events: auto;
+					
+			&:hover {
+				text-decoration: underline;
+				color: white;
+			}
+		}
+	}
+}
+
+@media (min-width: 750px) {
+	boom-header {
+		#headerBurger {
+			display: none;
+		}
+		
+		.items {
+			height: 4rem;
+			z-index: 999;
+			
+			.content {
+				justify-content: flex-end;
+				gap: 2rem;
+				height: 100%;
+			}
+			
+			button {
+				min-width: auto;
+				padding: .8em 1.2em;
+				font-size: .95em;
+			}
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	boom-header {
+		#headerLayout .content {
+			display: flex;
+			align-items: center;
+			
+			a {
+				flex-grow: 1;
+			}
+		}
+		
+		#headerBurger {
+			height: 1.6rem;
+			width: 2.2rem;
+			display: grid;
+			grid-template-rows: repeat(3, 1fr);
+			gap: .52rem;
+			transition: .2s;
+			
+			span {
+				width: 100%;
+				height: 100%;
+				border-radius: .2rem;
+				background-color: $highlight;
+				transition: .2s;
+			}
+			
+			&:active {
+				transform: scale(.8);
+			}
+			
+			&.active {
+				span:nth-child(1) {
+					transform: rotate(-45deg) translate(-.5rem, .5rem);
+				}
+				
+				span:nth-child(2) {
+					opacity: 0;
+					transform: rotate(90deg) translate(-.5rem, -.5rem);
+				}
+				
+				span:nth-child(3) { 
+					transform: rotate(45deg) translate(-.5rem, -.5rem);
+				}
+			}
+		}
+		
+		.items {
+			padding-block: 2rem 3rem;
+			z-index: 800;
+			transform: translateY(-100%);
+			transition: .4s, background-color .2s;
+			
+			.content {
+				flex-direction: column;
+				gap: 2.2rem;
+				
+				a {
+					font-size: 1.5em;
+					pointer-events: auto;
+				}
+				
+				button {
+					font-size: .9em;
+				}
+			}
+			
+			&.active {
+				background-color: rgb(17 7 31 / .9);
+				transform: translateY(4rem);
+			}
+		}
+	}
 }

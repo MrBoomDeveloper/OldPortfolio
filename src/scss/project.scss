@@ -1,7 +1,7 @@
 @import "style";
 @import "project/banner",
 	"project/actions";
-
+ 
 #app-holder {
 	height: 100%;
 	position: relative;
@@ -12,7 +12,7 @@
 	}
 	
 	#meta {
-		margin-block: .6rem 1.4rem;
+		margin-block: .7rem 1.4rem;
 		display: flex;
 		align-items: center;
 		gap: .2rem;
@@ -34,6 +34,10 @@
 		margin-top: 70vh;
 		top: 0;
 	}
+	
+	.general {
+		padding-bottom: 2rem;
+	}
 }
 
 @media (min-width: 750px) {
@@ -50,5 +54,9 @@
 	
 	#meta {
 		justify-content: center;
+	}
+	
+	.cat {
+		margin-block: 1em .4em;
 	}
 }

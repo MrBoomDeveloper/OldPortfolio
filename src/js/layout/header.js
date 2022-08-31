@@ -1,33 +1,70 @@
 import { el } from "boomutil";
 
-export function initHeader(view, pref) {
-	view.setAttribute("preferences", pref);
-}
+let rootView, headerBack, headerActive = false;
+
+const homeUrl = "https://mrboomdeveloper.github.io";
+
+const links = [
+	{ title: "Обо мне", link: "./#aboutme" },
+	{ title: "Мои проекты", link: "./#projects" },
+	{ title: "Связаться", link: "./#contact" }
+]
 
 class BoomHeader extends HTMLElement {
-	connectedCallback() { this.render() }
-	attributeChangedCallback() { this.render() }
-	
-	render() {
-		const pref = this.getAttribute("preferences");
-		console.log(pref);
-		/*this.innerHTML = `<div class="content">
-			<a href="${this.homeUrl}" id="boom-logo"><h2>MrBoomDev</h2></a>
-			<boom-burger></boom-burger>
+	connectedCallback() {
+		let html = `
+		<div id="headerLayout" class="reveal">
+			<div class="content">
+				<a href="${homeUrl}"><h2>MrBoomDev</h2></a>
+				<div id="headerBurger">
+					<span></span><span></span><span></span>
+				</div>
+			</div>
 		</div>
-		<div class="links">
-			<div class="content">`
-			for(const item of pref.links) {
-				this.innerHTML+= `<a href="${item.link}">${item.name}</a>`;
-			}
-			this.innerHTML+= `</div>
-		</div>`*/
+		<div class="items reveal">
+			<div class="content">`;
+				for(const item of links) {
+					html += `<a href="${item.link}">${item.title}</a>`;
+				}
+				html += `
+				<a href="./auth.html"><button neon>Войти в BoomID</button></a>
+			</div>
+		</div>
+		`;
+		this.innerHTML = html;
 	}
-	
-	set preferences(daga) {
-		this.
+} 
+
+customElements.define("boom-header", BoomHeader);
+window.addEventListener("load", () => {
+	headerBack = el("#headerLayout");
+	const headerBurger = el("#headerBurger");
+	const headerNav = el("boom-header .items");
+	headerBurger.addEventListener("click", function() {
+		this.classList.toggle("active");
+		headerActive = this.classList.contains("active");
+		if(headerActive) {
+			headerBack.classList.add("shadow");
+			headerNav.classList.add("active");
+		} else {
+			headerNav.classList.remove("active");
+			if((rootView?.scrollTop || 0) < 10)
+				headerBack.classList.remove("shadow");
+		}
+	});
+});
+
+export function fadeHeader(view) {
+	rootView = view;
+	if (view.scrollTop > 10) {
+		headerBack.classList.add("shadow");
+	} else {
+		if(!headerActive)
+			headerBack.classList.remove("shadow");
 	}
 }
 
-customElements.define("boom-header", BoomHeader);
+export default (() => {
+	window.addEventListener("scroll", () => fadeHeader(document.body));
+})();
 

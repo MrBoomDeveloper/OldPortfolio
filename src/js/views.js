@@ -1,7 +1,6 @@
-import Header from "./els/header"
-import Footer from "./els/footer"
+import Footer from "./els/footer";
+import "./layout/header";
 
 export default (() => {
-	customElements.define("site-footer", Footer)
-	customElements.define("site-header", Header)
-})()
+	customElements.define("site-footer", Footer);
+})();
