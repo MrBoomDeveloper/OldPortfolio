@@ -14,8 +14,12 @@ class BoomFilter extends HTMLElement {
 	render() {
 		let html = "";
 		if(!this.cats) return;
-		for(const cat of this.cats) {
-			html+= `<boom-item title="${cat}" type="${this.getAttribute('type')}" class="reveal"></boom-item>`;
+		try {
+			for(const cat of this.cats) {
+				html+= `<boom-item title="${cat}" type="${this.getAttribute('type')}" class="reveal"></boom-item>`;
+			}
+		} catch(exception) {
+			console.error(exception + ".........");
 		}
 		this.innerHTML = html;
 	}
