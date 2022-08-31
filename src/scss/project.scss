@@ -1,6 +1,10 @@
 @import "style";
 @import "project/banner",
 	"project/actions";
+	
+#app {
+	height: 100%;
+}
  
 #app-holder {
 	height: 100%;
