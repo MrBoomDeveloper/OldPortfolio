@@ -2,24 +2,19 @@
 <html lang="ru">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0"/>
 		<title>MrBoomDev - Фронтенд Разработчик</title>
 		<link rel="stylesheet" href="./css/project.css" />
-		<script src="./js/project.bundle.js"></script>
+		<script defer src="./js/project.bundle.js"></script>
 		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png" />
-		<meta name="description" content="Мне 15 лет и я веб-разработчик из России. Хоть иногда и занимаюсь мобильной платформой, но все же веб мне больше по душе. Делаю веб-сайты, приложения и 2D-игры с 9 лет." />
-		<meta itemprop="image" content="./img/icon/mrboom.jpg" />
-		<meta name="keywords" content="Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Мистер, Мистр, МистерБум, FNaF, ФНаФ, Фредди, Freddy, Multiplayer, Мультиплеер, Андроид, Android, Mobile, Phone" />
-		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
-		<meta name="yandex-verification" content="e99fcb399d946a57" />
-		
-		<script src="//cdn.jsdelivr.net/npm/eruda"></script><script>eruda.init()</script>
+		<meta name="description" content="Мне 15 лет и я обожаю веб-интерфейсы. Люблю рисовать, создавать и редизайнить. Также в свободное время я занимаюсь разработкой своей мобильной игры" />
+		<meta name="keywords" content="Mr, Boom, MrBoom, MrBoomDev, Dev, Мистер, Мистр, Бум, FNaF, ФНаФ, Multiplayer, Мультиплеер, Андроид, Android, Mobile" />
 	</head>
 	<body>
 		<div id="app">
-			<boom-header></boom-header>
+			<site-header></site-header>
 			
 			<div id="app-holder">
 				<div id="banner-holder">
@@ -60,8 +55,23 @@
 						<div id="screenshots">
 							<h2 class="cat">Скриншоты</h2>
 						</div>
+						
+						<div id="comments">
+							<div id="disqus_thread"><h1>Hello World!</h1></div>
+							<script>
+								let disqus_config = function () {
+									this.page.url = "https://mrboomdeveloper.github.io";
+									this.page.identifier = "PAGE_ID";
+								};
+								(function() {
+									const d = document, s = d.createElement('script');
+									s.src = 'https://mrboomdev.disqus.com/embed.js';
+									s.setAttribute('data-timestamp', + new Date());
+									(d.head || d.body).appendChild(s);
+								})();
+							</script>
+						</div>
 					</div>
-					
 					<site-footer></site-footer>
 				</div>
 			</div>

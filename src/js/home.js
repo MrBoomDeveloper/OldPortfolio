@@ -1,5 +1,8 @@
 require("./index");
-import { el } from "boomutil";
+import { el, notify } from "boomutil";
+import { initHeader } from "./layout/header";
+
+initHeader(window);
 
 (async () => {
 	const projects = await import("../json/projects");
@@ -7,6 +10,7 @@ import { el } from "boomutil";
 })();
 
 class BoomFilter extends HTMLElement {
+	//Это все я написал!? #*@*#!? Это прям ужас. Нужно будет все переписать тут
 	connectedCallback() {
 		this.render();
 	}

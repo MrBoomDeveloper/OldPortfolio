@@ -1,41 +1,47 @@
 import { el } from "boomutil";
+import { arrayToLi } from "../util/array";
 
-let rootView, headerBack, headerActive = false;
-
-const homeUrl = "https://mrboomdeveloper.github.io";
-
+let navActive = false;
+const homeUrl = "https://mrboomdev.ddns.net";
 const links = [
 	{ title: "Обо мне", link: "./#aboutme" },
 	{ title: "Мои проекты", link: "./#projects" },
 	{ title: "Связаться", link: "./#contact" }
 ]
 
-class BoomHeader extends HTMLElement {
-	connectedCallback() {
-		let html = `
-		<div id="headerLayout" class="reveal">
-			<div class="content">
-				<a href="${homeUrl}"><h2>MrBoomDev</h2></a>
-				<div id="headerBurger">
-					<span></span><span></span><span></span>
-				</div>
-			</div>
-		</div>
-		<div class="items reveal">
-			<div class="content">`;
-				for(const item of links) {
-					html += `<a href="${item.link}">${item.title}</a>`;
-				}
-				html += `
-				<a href="./auth.html"><button neon>Войти в BoomID</button></a>
-			</div>
-		</div>
-		`;
-		this.innerHTML = html;
-	}
-} 
+export function initHeader(parent) {
+	parent.addEventListener("scroll", () => {
+		const headerBack = el("site-header header");
+		if ((parent.scrollY || parent.scrollTop) > 10) {
+			headerBack.classList.add("shadow");
+		} else {
+			if(!navActive) {
+				headerBack.classList.remove("shadow");
+			}
+		}
+	});
+}
 
-customElements.define("boom-header", BoomHeader);
+export default class Header extends HTMLElement {
+	connectedCallback() {
+		this.innerHTML = `
+			<header class="reveal">
+				<div class="content">
+					<a href="${homeUrl}"><h2>MrBoomDev</h2></a>
+					<div id="headerBurger">
+						<span></span><span></span><span></span>
+					</div>
+				</div>
+			</header>
+			<nav class="reveal">
+				<ul class="content">${arrayToLi(links)}</ul>
+			</nav>
+		`;
+	}
+}
+
+/*
+
 window.addEventListener("load", () => {
 	headerBack = el("#headerLayout");
 	const headerBurger = el("#headerBurger");
@@ -54,20 +60,4 @@ window.addEventListener("load", () => {
 	});
 });
 
-export function fadeHeader(view) {
-	rootView = view;
-	if (view.scrollTop > 10) {
-		headerBack.classList.add("shadow");
-		console.log("add header shadow");
-	} else {
-		if(!headerActive) {
-			headerBack.classList.remove("shadow");
-			console.log("remove header shadow");
-		}
-	}
-}
-
-export default (() => {
-	window.addEventListener("scroll", () => fadeHeader(document.body));
-})();
-
+*/

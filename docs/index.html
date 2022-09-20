@@ -2,24 +2,22 @@
 <html lang="ru">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0"/>
 		<title>MrBoomDev - Фронтенд Разработчик</title>
 		<link rel="stylesheet" href="./css/home.css" />
-		<script src="./js/home.bundle.js"></script>
+		<script defer src="./js/home.bundle.js"></script>
 		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png" />
-		<meta name="description" content="Мне 15 лет и я веб-разработчик из России. Хоть иногда и занимаюсь мобильной платформой, но все же веб мне больше по душе. Делаю веб-сайты, приложения и 2D-игры с 9 лет." />
-		<meta itemprop="image" content="./img/icon/mrboom.jpg" />
-		<meta name="keywords" content="Mr, Boom, MrBoom, MrBoomDev, MrBoomDeveloper, Dev, Developer, Мистер, Мистр, МистерБум, FNaF, ФНаФ, Фредди, Freddy, Multiplayer, Мультиплеер, Андроид, Android, Mobile, Phone" />
-		<meta name="google-site-verification" content="LeFHmFhrNEA1vniLN3OZz2rkV6lK75eqm_Ax9eoDVlQ" />
+		<meta name="description" content="Мне 15 лет и я обожаю веб-интерфейсы. Люблю рисовать, создавать и редизайнить. Также в свободное время я занимаюсь разработкой своей мобильной игры" />
+		<meta name="keywords" content="Mr, Boom, MrBoom, MrBoomDev, Dev, Мистер, Мистр, Бум, FNaF, ФНаФ, Multiplayer, Мультиплеер, Андроид, Android, Mobile" />
+		<meta name="google-site-verification" content="vU1Q625PUyer8dRVaACJAMWpOYSxzlf4oeMnDuqheCU" />
 		<meta name="yandex-verification" content="e99fcb399d946a57" />
-		
-		<script src="//cdn.jsdelivr.net/npm/eruda"></script><script>eruda.init()</script>
 	</head>
 	<body>
-		<div id="app">
-			<boom-header></boom-header>
+		<div id="loader"></div>
+		<div id="app" class="reveal">
+			<site-header></site-header>
 
 			<main>
 				<div class="content">
@@ -27,13 +25,17 @@
 						<div class="info reveal">
 							<span>Фронтенд-Разработчик</span>
 							<h1>Привет, я MrBoomDev!</h1>
-							<p>Мне 15 лет и я веб-разработчик из России. Хоть иногда и занимаюсь мобильной платформой, но все же веб мне больше по душе. Делаю веб-сайты, приложения и 2D-игры с 9 лет.</p>
+							<!--<p>Мне 15 лет и я обожаю веб-интерфейсы. Люблю рисовать, создавать и редизайнить. Также в свободное время я занимаюсь разработкой своей мобильной игры.</p>-->
+							<p>ВНИМАНИЕ! Сайт еще не доделан. Пожалуйста не смотрите на эту картинку! Я нарисовал ее в спешке, чтобы не было пусто. Потом я обязательно нарисую что-то лучше!</p>
 							<a href="#projects">
 								<button neon>Взглянуть на проекты</button>
 							</a>
+							<a href="#projects">
+								<boom-button class="neon">Взглянуть на проекты</boom-button>
+							</a>
 						</div>
 						<div class="image reveal">
-							<img src="img/hero.jpg" title="Крутой MrBoom" alt="Крутой MrBoom" />
+							<img src="img/hero.png" title="MrBoom Мистер Вайт" alt="MrBoom Мистер Вайт" />
 						</div>
 					</section>
 				</div>
@@ -62,8 +64,8 @@
 					<div class="content">
 						<h2 class="cat">Мои проекты</h2>
 						<boom-filter id="tags" type="chip"></boom-filter>
-						<div id="projects" class="grid"></div>
-						<a href="./project.html?name=MrBoomDeveloper/boomstudio">
+						<div id="projects-grid" class="grid"></div>
+						<a href="./project?name=MrBoomDeveloper/boomstudio">
 							<button neon>projects.open("boomstudio");</button>
 						</a>
 					</div>
@@ -75,6 +77,7 @@
 							<h2 class="cat">Обо мне</h2>
 							<p>Данная секция в настоящее время находится в разработке.</p>
 						</div>
+						<lottie-player class="small-lottie" src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
 					</div>
 				</section>
 				
@@ -90,8 +93,9 @@
 								<button neon type="submit">Отправить</button>
 							</form>
 						</div>
-						<lottie-player class="small-lottie" src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
 					</div>
+					
+					<img class="center-decoration" src="https://count.getloli.com/get/@demo?theme=rule34" />
 				</section>
 			</main>
 		
