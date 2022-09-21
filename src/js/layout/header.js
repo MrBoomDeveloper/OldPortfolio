@@ -20,6 +20,18 @@ export function initHeader(parent) {
 			}
 		}
 	});
+	initBurger();
+}
+
+function initBurger() {
+	const burger = el("site-header #headerBurger");
+	const nav = el("site-header nav");
+	const headerBack = el("site-header header");
+	burger.addEventListener("click", () => {
+		burger.classList.toggle("active");
+		nav.classList.toggle("active");
+		headerBack.classList.toggle("activeByBurger");
+	})
 }
 
 export default class Header extends HTMLElement {
@@ -39,25 +51,3 @@ export default class Header extends HTMLElement {
 		`;
 	}
 }
-
-/*
-
-window.addEventListener("load", () => {
-	headerBack = el("#headerLayout");
-	const headerBurger = el("#headerBurger");
-	const headerNav = el("boom-header .items");
-	headerBurger.addEventListener("click", function() {
-		this.classList.toggle("active");
-		headerActive = this.classList.contains("active");
-		if(headerActive) {
-			headerBack.classList.add("shadow");
-			headerNav.classList.add("active");
-		} else {
-			headerNav.classList.remove("active");
-			if((rootView?.scrollTop || 0) < 10)
-				headerBack.classList.remove("shadow");
-		}
-	});
-});
-
-*/

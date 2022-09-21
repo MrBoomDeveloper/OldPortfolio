@@ -6,11 +6,6 @@ import { fillPackage, fillDescription } from "./project/fill";
 
 initHeader(el("#app-holder"));
 
-	const a = el("#app-holder");
-	a.addEventListener("scroll", () => {
-		console.log(a.scrollTop);
-	})
-
 const repo = location.param("name") || "MrBoomDeveloper/boomstudio";
 Promise.all([loadPackage(repo), loadDescription(repo)]).then(data => {
 	fillPackage(data[0]);

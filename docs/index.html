@@ -25,33 +25,33 @@
 						<div class="info reveal">
 							<span>Фронтенд-Разработчик</span>
 							<h1>Привет, я MrBoomDev!</h1>
-							<!--<p>Мне 15 лет и я обожаю веб-интерфейсы. Люблю рисовать, создавать и редизайнить. Также в свободное время я занимаюсь разработкой своей мобильной игры.</p>-->
-							<p>ВНИМАНИЕ! Сайт еще не доделан. Пожалуйста не смотрите на эту картинку! Я нарисовал ее в спешке, чтобы не было пусто. Потом я обязательно нарисую что-то лучше!</p>
-							<a href="#projects">
-								<button neon>Взглянуть на проекты</button>
-							</a>
+							<p>Мне 15 лет и я обожаю веб-интерфейсы. Люблю рисовать, создавать и редизайнить. Также в свободное время я занимаюсь разработкой своей мобильной игры.</p>
 							<a href="#projects">
 								<boom-button class="neon">Взглянуть на проекты</boom-button>
 							</a>
 						</div>
 						<div class="image reveal">
-							<img src="img/hero.png" title="MrBoom Мистер Вайт" alt="MrBoom Мистер Вайт" />
+							<div class="content">
+								<img src="img/hero.png" title="MrBoom Мистер Вайт" alt="MrBoom Мистер Вайт" />
+							</div>
 						</div>
 					</section>
 				</div>
 				
-				<section id="skills" class="block swap reveal">
+				<section id="skills" class="skills block swap reveal">
 					<div class="content">
 						<lottie-player src="https://assets7.lottiefiles.com/animated_stickers/lf_tgs_emn0iC.json" loop autoplay></lottie-player>
 						<div class="text">
 							<h2 class="cat">Мои Навыки</h2>
 							<div class="grid">
-								<boom-item title="Firebase" icon="./img/icon/firebase.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="JavaScript" icon="./img/icon/js.svg" type="card" class="reveal"></boom-item>
 								<boom-item title="Java" icon="./img/icon/java.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="Git" icon="./img/icon/git.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="Npm" icon="./img/icon/npm.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="Firebase" icon="./img/icon/firebase.svg" type="card" class="reveal"></boom-item>
 								<boom-item title="Android" icon="./img/icon/android.svg" type="card" class="reveal"></boom-item>
 								<boom-item title="Webpack" icon="./img/icon/webpack.svg" type="card" class="reveal"></boom-item>
 								<boom-item title="NodeJS" icon="./img/icon/node.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="JavaScript" icon="./img/icon/js.svg" type="card" class="reveal"></boom-item>
 								<boom-item title="Sass" icon="./img/icon/sass.svg" type="card" class="reveal"></boom-item>
 								<boom-item title="CSS" icon="./img/icon/css.svg" type="card" class="reveal"></boom-item>
 								<boom-item title="HTML" icon="./img/icon/html.svg" type="card" class="reveal"></boom-item>
@@ -60,7 +60,7 @@
 					</div>
 				</section>
 				
-				<section id="projects" class="block thicc reveal">
+				<section id="projects" class="projects block thicc reveal">
 					<div class="content">
 						<h2 class="cat">Мои проекты</h2>
 						<boom-filter id="tags" type="chip"></boom-filter>
@@ -71,7 +71,7 @@
 					</div>
 				</section>
 				
-				<section id="aboutme" class="block swap reveal">
+				<section id="aboutme" class="aboutme block swap reveal">
 					<div class="content">
 						<div class="text">
 							<h2 class="cat">Обо мне</h2>
@@ -81,21 +81,39 @@
 					</div>
 				</section>
 				
-				<section id="contact" class="block reveal">
+				<section id="faq" class="faq block reveal">
+					<div class="content">
+						<lottie-player class="small-lottie" src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
+						<div class="text">
+							<h2 class="cat">Вопросы и Ответы</h2>
+							<p>Данная секция в настоящее время находится в разработке.</p>
+						</div>
+					</div>
+				</section>
+				
+				<section id="contact" class="contact block reveal">
 					<div class="content">
 						<div class="text">
 							<h2 class="cat">Связаться со мной</h2>
-							<p class="mobile-description">Если у тебя есть какие-либо вопросы или хочешь со мной поработать, то смело пиши мне! Отвечу в течение недели!</p>
-							<form action="https://send.pageclip.co/VoMFoh1dOuY1FWGpkTJQacY4vVmrSxUa" method="post" class="reveal">
-								<input neon type="text" name="name" placeholder="Имя" required/>
-								<input neon type="email" name="email" placeholder="Почта" required/>
-								<textarea neon name="text" placeholder="Текст письма" required></textarea>
-								<button neon type="submit">Отправить</button>
-							</form>
+							<p class="main-description">Если у тебя есть какие-либо вопросы или хочешь со мной поработать, то смело пиши мне! Постараюсь ответить в течение недели! Если же тебе почта не удобна, то можем поговорить в другом месте.</p>
+							<div class="also">
+								<p>Я доступен в следующих соц-сетях:</p>
+								<div class="social">
+									<a href="https://bit.ly/mrboomdevvk"><img src="./img/icon/vk.png"/></a>
+									<a href="https://bit.ly/mrboomdevtg"><img src="./img/icon/tg.png"/></a>
+									<a href="https://bit.ly/mrboomdevds"><img src="./img/icon/ds.png"/></a>
+								</div>
+							</div>
 						</div>
+						<form action="https://send.pageclip.co/VoMFoh1dOuY1FWGpkTJQacY4vVmrSxUa" method="post" class="reveal">
+							<input neon type="text" name="name" placeholder="Имя" required/>
+							<input neon type="email" name="email" placeholder="Почта" required/>
+							<textarea neon name="text" placeholder="Текст письма" required></textarea>
+							<boom-button class="neon" type="submit">Отправить</boom-button>
+						</form>
 					</div>
 					
-					<img class="center-decoration" src="https://count.getloli.com/get/@demo?theme=rule34" />
+					<img class="center-decoration" src="https://count.getloli.com/get/@mrboomdev?theme=rule34" />
 				</section>
 			</main>
 		

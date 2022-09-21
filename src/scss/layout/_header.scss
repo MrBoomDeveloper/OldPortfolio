@@ -1,7 +1,5 @@
 site-header {
 	header {
-		display: flex;
-		justify-content: center;
 		height: 4rem;
 		z-index: 900;
 		width: 100%;
@@ -9,14 +7,26 @@ site-header {
 		top: 0;
 		left: 0;
 		background-color: $none;
+		backdrop-filter: blur(1px);
 		transition: 1s, background-color .2s;
 		
-		&.shadow {
+		&:is(.shadow, .activeByBurger) {
 			background-color: rgb(17 7 31 / .9);
+		}
+		
+		.content {
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+		
+		&.fast {
+			transition: .4s;
 		}
 	}
 	
 	nav {
+		z-index: 999;
 		width: 100%;
 		position: fixed;
 		top: 0;
@@ -40,6 +50,8 @@ site-header {
 	}
 	
 	h2 {
+		font-family: "Raleway", sans-serif;
+		font-size: 1.7em;
 		color: $primary;
 		display: inline;
 	}
@@ -64,18 +76,32 @@ site-header {
 	}
 }
 
-
-
-/*
-
 @media (max-width: 750px) {
-	boom-header {
-		#headerLayout .content {
-			display: flex;
-			align-items: center;
+	site-header {
+		header a {
+			flex-grow: 1;
+		}
+		
+		nav {
+			backdrop-filter: blur(1px);
+			background-color: rgb(17 7 31 / .9);
+			top: 4rem;
+			transform: translateX(100%);
 			
-			a {
-				flex-grow: 1;
+			.content {
+				padding-block: 1.5rem 3rem;
+				flex-direction: column;
+				align-items: flex-end;
+				gap: 1.2em;
+				font-size: 1.5em;
+			}
+			
+			&.fast {
+				transition: .4s;
+			}
+			
+			&.active {
+				transform: translateX(0);
 			}
 		}
 		
@@ -114,33 +140,5 @@ site-header {
 				}
 			}
 		}
-		
-		.items {
-			padding-block: 2rem 3rem;
-			z-index: 800;
-			transform: translateY(-100%);
-			transition: .4s, background-color .2s;
-			
-			.content {
-				flex-direction: column;
-				gap: 2.2rem;
-				
-				a {
-					font-size: 1.5em;
-					pointer-events: auto;
-				}
-				
-				button {
-					font-size: .9em;
-				}
-			}
-			
-			&.active {
-				background-color: rgb(17 7 31 / .9);
-				transform: translateY(4rem);
-			}
-		}
 	}
-}*/
-
-
+}
