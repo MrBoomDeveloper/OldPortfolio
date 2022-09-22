@@ -1,10 +1,11 @@
 require("./index");
-import { el, notify } from "boomutil";
+import { el, notify, reveal, initReveal } from "boomutil";
 import { initHeader } from "./layout/header";
 
-initHeader(window);
+initHeader(window, true);
+setTimeout(() => initReveal(window), 250);
 
-(async () => {
+/*(async () => {
 	const projects = await import("../json/projects");
 	console.log(projects);
 })();
@@ -42,4 +43,6 @@ customElements.define("boom-filter", BoomFilter);
 
 window.onload = () => {
 	el("#tags").array = ["test", "test1", "test2"];
-}
+}*/
+
+

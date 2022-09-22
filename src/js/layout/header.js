@@ -1,15 +1,26 @@
-import { el } from "boomutil";
+import { el, els } from "boomutil";
 import { arrayToLi } from "../util/array";
 
 let navActive = false;
+let headerLis = [];
 const homeUrl = "https://mrboomdev.ddns.net";
 const links = [
-	{ title: "Обо мне", link: "./#aboutme" },
+	{ title: "Главная", link: "./#hero" },
 	{ title: "Мои проекты", link: "./#projects" },
+	{ title: "Обо мне", link: "./#aboutme" },
 	{ title: "Связаться", link: "./#contact" }
 ]
 
-export function initHeader(parent) {
+export function initHeader(parent, enableHighlight) {
+	if(enableHighlight) {
+		initHighlight(parent, links.map(item => {
+			const hash = (item.link).substring(2, (item.link).length);
+			headerLis = els("site-header nav li");
+			headerLis[0].classList.add("active");
+			return hash;
+		})
+	)}
+	
 	parent.addEventListener("scroll", () => {
 		const headerBack = el("site-header header");
 		if ((parent.scrollY || parent.scrollTop) > 10) {
@@ -21,6 +32,24 @@ export function initHeader(parent) {
 		}
 	});
 	initBurger();
+}
+
+function initHighlight(parent, sections) {
+	const views = sections.map(hash => el(hash));
+	parent.addEventListener("scroll", () => {
+		views.forEach((view, id) => {
+			if(view.getBoundingClientRect().top < 150) {
+				setHighlight(id);
+			}
+		});
+	});
+}
+
+function setHighlight(id) {
+	for(const view of headerLis) {
+		view.classList.remove("active");
+	}
+	headerLis[id].classList.add("active");
 }
 
 function initBurger() {
@@ -46,7 +75,7 @@ export default class Header extends HTMLElement {
 				</div>
 			</header>
 			<nav class="reveal">
-				<ul class="content">${arrayToLi(links)}</ul>
+				<ul class="content">${arrayToLi(links, true)}</ul>
 			</nav>
 		`;
 	}

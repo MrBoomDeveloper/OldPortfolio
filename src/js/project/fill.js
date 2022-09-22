@@ -1,4 +1,4 @@
-import { el, notify, formatBytes, formatDocType } from "boomutil";
+import { el, notify, formatBytes } from "boomutil";
 
 function formatDate(date) {
 	const now = new Date();

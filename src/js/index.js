@@ -1,6 +1,4 @@
 import { el } from "boomutil";
-import "boomutil/js/views";
-import "boomutil/js/events";
 import "./views";
 
 setTimeout(() => {
