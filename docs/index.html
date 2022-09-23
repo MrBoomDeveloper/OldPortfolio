@@ -37,60 +37,64 @@
 					</section>
 				</div>
 				
-				<section id="skills" class="skills block swap reveal">
+				<section id="skills" class="skills block swap reveal from-bottom">
 					<div class="content">
-						<lottie-player src="https://assets7.lottiefiles.com/animated_stickers/lf_tgs_emn0iC.json" loop autoplay></lottie-player>
+						<lottie-player class="reveal from-left" src="https://assets7.lottiefiles.com/animated_stickers/lf_tgs_emn0iC.json" loop autoplay></lottie-player>
 						<div class="text">
 							<h2 class="cat">Мои Навыки</h2>
 							<div class="grid">
-								<boom-item title="JavaScript" icon="./img/icon/js.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="Java" icon="./img/icon/java.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="Git" icon="./img/icon/git.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="Npm" icon="./img/icon/npm.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="Firebase" icon="./img/icon/firebase.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="Android" icon="./img/icon/android.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="Webpack" icon="./img/icon/webpack.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="NodeJS" icon="./img/icon/node.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="Sass" icon="./img/icon/sass.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="CSS" icon="./img/icon/css.svg" type="card" class="reveal"></boom-item>
-								<boom-item title="HTML" icon="./img/icon/html.svg" type="card" class="reveal"></boom-item>
+								<boom-item title="JavaScript" icon="./img/icon/js.svg" class="card reveal"></boom-item>
+								<boom-item title="Java" icon="./img/icon/java.svg" class="card reveal"></boom-item>
+								<boom-item title="Git" icon="./img/icon/git.svg" class="card reveal"></boom-item>
+								<boom-item title="Npm" icon="./img/icon/npm.svg" class="card reveal"></boom-item>
+								<boom-item title="Firebase" icon="./img/icon/firebase.svg" class="card reveal"></boom-item>
+								<boom-item title="Android" icon="./img/icon/android.svg" class="card reveal"></boom-item>
+								<boom-item title="Webpack" icon="./img/icon/webpack.svg" class="card reveal"></boom-item>
+								<boom-item title="NodeJS" icon="./img/icon/node.svg" class="card reveal"></boom-item>
+								<boom-item title="Sass" icon="./img/icon/sass.svg" class="card reveal"></boom-item>
+								<boom-item title="CSS" icon="./img/icon/css.svg" class="card reveal"></boom-item>
+								<boom-item title="HTML" icon="./img/icon/html.svg" class="card reveal"></boom-item>
 							</div>
 						</div>
 					</div>
 				</section>
 				
-				<section id="projects" class="projects block thicc reveal">
+				<section id="projects" class="projects block thicc reveal from-bottom">
 					<div class="content">
 						<h2 class="cat">Мои проекты</h2>
-						<boom-filter id="tags" type="chip"></boom-filter>
+						<boom-select id="filter" class="chip" select="single"></boom-select>
 						<div id="projects-grid" class="grid"></div>
-						<a href="./project?name=MrBoomDeveloper/boomstudio">
-							<button neon>projects.open("boomstudio");</button>
-						</a>
+						<card-product banner="./img/banner/fnafm.jpg" tags="Yags" title="Тест" description="lol"></card-product>
+						<boom-button title="Посмотреть больше?" class="large" description="Перейти в раздел со всеми моими проектами, отсортированными по дате добавления."></boom-button>
+						<card-button clickable title="Посмотреть больше?" description="Перейти в раздел со всеми моеми проектами, отсортированными по дате добавления."></card-button>
+						<boom-product class="project" banner="./img/banner/fnafm.jpg" title="Загаловок" description="Описание" highlight="Подсветка" tags="Теги"></boom-product>
 					</div>
 				</section>
 				
-				<section id="aboutme" class="aboutme block swap reveal">
+				<section id="aboutme" class="aboutme block reveal from-bottom">
 					<div class="content">
 						<div class="text">
 							<h2 class="cat">Обо мне</h2>
-							<p>Данная секция в настоящее время находится в разработке.</p>
+							<p>Меня зовут Денис и мне 15 лет. Специализируюсь я в сфере фронтенд разработки. В основоном мне нравиться верстать красивые веб-интерфейсы, адаптивные под многие устройства. Вообще я люблю концепцию создания кучи маленьких проектов, ведь они не занимают много времени и позволяют опробовать многие технологии современного веба! Еще давно в 7 лет я загорелся мечтой сделать нечто свое, что другим понравиться, например мобильную игру, ведь у всех телефоны и все смогут в нее сыграть. В настоящее время я стараюсь делать веб-приложения, доступные на все платформы с классным дизайном!</p>
 						</div>
-						<lottie-player class="small-lottie" src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
+						<lottie-player class="reveal from-right" src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
 					</div>
 				</section>
 				
-				<section id="faq" class="faq block reveal">
+				<section id="faq" class="faq block swap reveal from-bottom">
 					<div class="content">
-						<lottie-player class="small-lottie" src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
+						<lottie-player class="reveal from-left" src="https://assets10.lottiefiles.com/animated_stickers/lf_tgs_cjf0csuw.json" loop autoplay></lottie-player>
 						<div class="text">
 							<h2 class="cat">Вопросы и Ответы</h2>
-							<p>Данная секция в настоящее время находится в разработке.</p>
+							<boom-faq title="Будут ли какие-нибудь проекты для пк?" description="В ближайшее время я не планирую таких."></boom-faq>
+							<boom-faq title="Во сколько лет ты начал программировать?" description="В 9 лет я начал с конструкторов по типу Scratch, а потом с них потихоньку переходил на таких языки программирования как Java и JavaScript."></boom-faq>
+							<boom-faq title="Почему обновления так редко?" description="У меня есть школа."></boom-faq>
+							<boom-faq title="Что это за розовая коала?" description="Это не коала, а медведь! Вдохновлен он был с персонажа Funtime Freddy игры Five Nights at Freddy's: Sister Location."
 						</div>
 					</div>
 				</section>
 				
-				<section id="contact" class="contact block reveal">
+				<section id="contact" class="contact block reveal from-bottom">
 					<div class="content">
 						<div class="text">
 							<h2 class="cat">Связаться со мной</h2>
