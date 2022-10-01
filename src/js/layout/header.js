@@ -9,7 +9,7 @@ const links = [
 	{ title: "Мои проекты", link: "./#projects" },
 	{ title: "Обо мне", link: "./#aboutme" },
 	{ title: "Связаться", link: "./#contact" }
-]
+];
 
 export function initHeader(parent, enableHighlight) {
 	if(enableHighlight) {
@@ -18,9 +18,14 @@ export function initHeader(parent, enableHighlight) {
 			headerLis = els("site-header nav li");
 			headerLis[0].classList.add("active");
 			return hash;
-		})
-	)}
+		}));
+	}
 	
+	watchScroll(parent);
+	initBurger();
+}
+
+function watchScroll(parent) {
 	parent.addEventListener("scroll", () => {
 		const headerBack = el("site-header header");
 		if ((parent.scrollY || parent.scrollTop) > 10) {
@@ -31,7 +36,6 @@ export function initHeader(parent, enableHighlight) {
 			}
 		}
 	});
-	initBurger();
 }
 
 function initHighlight(parent, sections) {
@@ -60,7 +64,7 @@ function initBurger() {
 		burger.classList.toggle("active");
 		nav.classList.toggle("active");
 		headerBack.classList.toggle("activeByBurger");
-	})
+	});
 }
 
 export default class Header extends HTMLElement {
