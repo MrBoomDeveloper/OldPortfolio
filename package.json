@@ -3,20 +3,29 @@
 	"version": "1.0.0",
 	"description": "README.md",
 	"scripts": {
-		"main": "sass --watch src/scss:docs/css --style compressed & webpack --watch",
-		"sass": "sass --watch src/scss:docs/css --style compressed",
-		"js": "webpack --watch"
+		"dev": "webpack serve --open --config build/webpack.dev.js",
+		"prod": "webpack --config build/webpack.prod.js"
 	},
 	"keywords": [
-		"mrboomdev", "site",
-		"js", "webpack",
-		"scss", "sass", "css"
+		"mrboomdev",
+		"site",
+		"js",
+		"webpack",
+		"scss",
+		"sass",
+		"css"
 	],
 	"author": "MrBoomDev",
 	"license": "ISC",
 	"devDependencies": {
-		"webpack": "^5.4.0",
-		"webpack-cli": "^4.2.0"
+		"css-loader": "^6.7.1",
+		"html-webpack-plugin": "^5.5.0",
+		"sass": "^1.55.0",
+		"sass-loader": "^13.0.2",
+		"style-loader": "^3.3.1",
+		"webpack": "^5.74.0",
+		"webpack-cli": "^4.2.0",
+		"webpack-dev-server": "^4.11.1"
 	},
 	"dependencies": {
 		"boomutil": "^1.0.6"

@@ -1,4 +1,4 @@
-require("./index");
+require("./default");
 import { error, el, reveal } from "boomutil";
 import { initHeader } from "./layout/header";
 import { loadPackage, loadDescription } from "./project/load";

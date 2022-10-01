@@ -6,6 +6,14 @@
 		grid-template-columns: 1fr 20rem;
 	}
 	
+	.cat {
+		margin-bottom: .7em;
+		
+		&.large-margin {
+			margin-bottom: 1em;
+		}
+	}
+	
 	lottie-player {
 		height: 19rem;
 		width: 19rem;

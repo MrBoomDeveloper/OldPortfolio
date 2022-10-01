@@ -30,14 +30,14 @@
 		
 		h1 {
 			font-size: 2.5em;
-			margin-block: .2em .3em;
+			margin-top: .2em;
 			font-family: "Raleway", sans-serif;
 			
 			&.revealed { transition-delay: .2s }
 		}
 		
 		p {
-			margin-block: .5em 1em;
+			margin-block: .7em 1.4em;
 			max-width: 25em;
 			font-size: 1.05em;
 			line-height: 1.6;
@@ -71,10 +71,10 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			height: 100vh;
 			
 			img {
 				object-position: right;
+				height: 100vh;
 			}
 		}
 	}
@@ -86,11 +86,29 @@
 		height: auto;
 		
 		.info {
+			text-align: center;
 			width: 90%;
 			height: 65vh;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			
+			span {
+				font-size: 1.1em;
+			}
+			
+			h1 {
+				font-size: 3em;
+			}
+			
+			p {
+				font-size: 1.1em;
+				margin-inline: auto;
+			}
+			
+			boom-button {
+				font-size: 1.05em;
+			}
 		}
 		.image img {
 			width: 70vw;
