@@ -1,9 +1,23 @@
 .projects.block {
 	padding-top: 3rem;
+	
+	#seeAllProjects {
+		margin-top: 1.5rem;
+	}
+	
 	.text {
 		display: flex;
 		flex-direction: column;
 		gap: .5rem;
+	}
+	
+	.grid {
+		margin-top: 1.5rem;
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+		
+		boom-article {
+			height: 100%;
+		}
 	}
 	
 	.filter-holder {

@@ -27,27 +27,48 @@ filter.load([
 	{ title: "Все", gicon: "dataset" }
 ]);
 
-function loadProjects(json) {
+function showProjects(json) {
 	el("#projects .grid").innerHTML = (list => {
 		return list.reduce((html, item) => {
-			const { title, description, tags, banner, link } = item;
-			return html + `<a href="${link}"><boom-article class="product"
-				title="${title}" 
-				description="${description}" 
-				banner="${banner}" 
-				tags="${tags}">
-			</boom-article></a>`;
+			const { title, description, tags, banner, link, highlight } = item;
+			return html + `<a href="${link}"><boom-article title="${title}" 
+				banner="${banner ? (`./img/banner/${banner}.jpg`) : undefined}"
+				highlight="${highlight}" tags="${tags}"
+				description="${description}"
+				class="product clickable"></boom-article></a>`;
 		}, "");
 	})(json);
 }
 
+const pages = {
+	a0(data) {
+		return data.best.map(item => {
+			return data.all[item];
+		});
+	},
+	
+	a1() {
+		
+	},
+	
+	a2() {
+		
+	},
+	
+	a3(data) {
+		return data.old.map(item => {
+			return data.all[item];
+		});
+	},
+	
+	a4(data) {
+		return Object.values(data.all);
+	}
+};
+
 import("../json/projects.json").then(data => {
 	filter.onSelected = i => {
-		if(i == 0) {
-			loadProjects(data.best.map(item => data.all[item]));
-		}
-		
-		if([1, 2, 3, 4].includes(i)) return console.error("Данная категория еще не работает");
+		showProjects(pages[`a${i}`](data));
 	};
 	
 	el("#seeAllProjects").addEventListener("click", () => {
@@ -55,7 +76,7 @@ import("../json/projects.json").then(data => {
 		filter.select(4);
 	});
 	
-	loadProjects(data.best.map(item => data.all[item]));
+	showProjects(data.best.map(item => data.all[item]));
 });
 
 //EARLY UPDATES FOR LIBRARY
@@ -63,15 +84,35 @@ import("../json/projects.json").then(data => {
 class BoomArticle extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = ((html = "", attr = name => this.getAttribute(name)) => {
-			if(attr("banner")) html += `<img src="${attr("banner")}" alt="${attr("title")}">`;
+			html += "<div>";
+			if(attr("banner") != "undefined") {
+				html += `<img src="${attr("banner")}" alt="${attr("title")}">`;
+			}
 			html += `<div class="details">`;
-			if(attr("highlight")) html += `<span class="highlight">${attr("highlight")}</span>`;
+			if(attr("highlight") != "undefined") {
+				html += `<span class="highlight">${attr("highlight")}</span>`;
+			}
 			html += `<h3>${attr("title")}</h3>`;
-			if(attr("description")) html += `<p>${attr("description")}</p>`;
-			html += `</div>`;
-			return html;
+			if(attr("description") != "undefined") {
+				html += `<p>${attr("description")}</p>`;
+			}
+			html += fillTags(attr("tags"));
+			return html + "</div>";
 		})();
 	}
+}
+
+function fillTags(tags, html = "") {
+	if(tags != "undefined") {
+		html += `<div class="tags">`;
+			html += tags.split(",").reduce((html, item) => {
+				return html + `<boom-item class="tag" 
+					title="${item}"></boom-item>`;
+			}, "");
+			html += `</div>`;
+	}
+	
+	return html;
 }
 
 customElements.define("boom-article", BoomArticle);
