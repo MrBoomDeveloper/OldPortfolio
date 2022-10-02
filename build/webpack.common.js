@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require('eslint-webpack-plugin');
 
+const isProd = process.argv[process.argv.indexOf('--mode') + 1] == "production";
+
 module.exports = {
 	entry: {
 		index: "./src/js/index.js",
@@ -20,7 +22,7 @@ module.exports = {
 		new ESLintPlugin()
 	],
 	output: {
-		filename: "[name].js",
+		filename: "[name].[contenthash].js",
 		path: path.resolve(__dirname, "../docs"),
 		clean: true
 	},
@@ -40,7 +42,8 @@ function getHtml(name) {
 		template: path.resolve(__dirname, "../src/html/template.html"),
 		chunks: [name],
 		body: fs.readFileSync(path.resolve(__dirname, `../src/html/${name}.html`), "utf8"),
-		updated: Date.now()
+		updated: Date.now(),
+		isProd: isProd
 	});
 }
 

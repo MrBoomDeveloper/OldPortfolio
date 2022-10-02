@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"description": "README.md",
 	"scripts": {
-		"dev": "webpack serve --open --config build/webpack.dev.js",
-		"prod": "webpack --config build/webpack.prod.js"
+		"dev": "webpack serve --mode development --open --config build/webpack.dev.js",
+		"prod": "webpack --mode production --config build/webpack.prod.js"
 	},
 	"keywords": [
 		"mrboomdev",
