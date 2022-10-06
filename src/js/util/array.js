@@ -3,8 +3,8 @@ function addEffect(isHeader) {
 }
 
 export function arrayToLi(array, isHeader, result = "") {
-	for(const { image, alt, title, link } of array) {
-		result += `<li class="${addEffect(isHeader)}"><a href="${link}">`;
+	for(const { image, alt, title, url } of array) {
+		result += `<li class="${addEffect(isHeader)}"><a href="${url}">`;
 		if(image) {
 			result += `<img src="${image}" alt="${alt}" title="${alt}" />`;
 		}

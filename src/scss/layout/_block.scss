@@ -48,13 +48,15 @@
 
 @media (max-width: 750px) {
 	.block {
+		$lottieWidth: min(18rem, 75%);
+		
 		.content {
 			grid-template-columns: 1fr;
 		}
 		
 		lottie-player {
 			margin-inline: auto;
-			width: min(10rem, 75%);
+			width: $lottieWidth;
 		}
 		
 		&.swap {
@@ -65,7 +67,7 @@
 			lottie-player {
 				margin-top: 2rem;
 				grid-row: 2;
-				width: min(18rem, 75%);
+				width: $lottieWidth;
 			}
 		}
 	}

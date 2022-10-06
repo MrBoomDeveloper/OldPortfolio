@@ -1,0 +1,22 @@
+{
+	"homeUrl": "https://mrboomdev.ru",
+	
+	"links": [
+		{ 
+			"title": "Главная", 
+			"url": "./#hero" 
+		},
+		{ 
+			"title": "Мои проекты", 
+			"url": "./#projects" 
+		},
+		{ 
+			"title": "Обо мне", 
+			"url": "./#aboutme" 
+		},
+		{ 
+			"title": "Связаться", 
+			"url": "./#contact" 
+		}
+	]
+}

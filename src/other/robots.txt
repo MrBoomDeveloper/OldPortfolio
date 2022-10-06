@@ -1,13 +1,5 @@
 User-agent: *
-Disallow: /404.html
-Disallow: /images/icons/android.svg
-Disallow: /images/icons/css.svg
-Disallow: /images/icons/discord.png
-Disallow: /images/icons/firebase.svg
-Disallow: /images/icons/html.svg
-Disallow: /images/icons/java.svg
-Disallow: /images/icons/js.svg
-Disallow: /images/icons/node.svg
-Disallow: /images/icons/vk.png
-Disallow: /images/icons/youtube.png
-Disallow: /images/banners/not_found.jpg
+Disallow: /404
+Disallow: /img/skills/
+Disallow: /img/social/
+Sitemap: https://mrboomdev.ru/sitemap.txt

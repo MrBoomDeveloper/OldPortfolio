@@ -1,20 +1,14 @@
 import { el, els } from "boomutil";
 import { arrayToLi } from "../util/array";
+const { homeUrl, links } = require("../../json/header.json");
 
 let navActive = false;
 let headerLis = [];
-const homeUrl = "https://mrboomdev.ddns.net";
-const links = [
-	{ title: "Главная", link: "./#hero" },
-	{ title: "Мои проекты", link: "./#projects" },
-	{ title: "Обо мне", link: "./#aboutme" },
-	{ title: "Связаться", link: "./#contact" }
-];
 
 export function initHeader(parent, enableHighlight) {
 	if(enableHighlight) {
 		initHighlight(parent, links.map(item => {
-			const hash = (item.link).substring(2, (item.link).length);
+			const hash = (item.url).substring(2, (item.url).length);
 			headerLis = els("site-header nav li");
 			headerLis[0].classList.add("active");
 			return hash;

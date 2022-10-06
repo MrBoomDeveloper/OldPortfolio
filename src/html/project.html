@@ -1,80 +1,82 @@
-<!DOCTYPE html>
-<html lang="ru">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0"/>
-		<title>MrBoomDev - Фронтенд Разработчик</title>
-		<link rel="stylesheet" href="./css/project.css" />
-		<script defer src="./js/project.bundle.js"></script>
-		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?" />
-		<link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png" />
-		<meta name="description" content="Мне 15 лет и я обожаю веб-интерфейсы. Люблю рисовать, создавать и редизайнить. Также в свободное время я занимаюсь разработкой своей мобильной игры" />
-		<meta name="keywords" content="Mr, Boom, MrBoom, MrBoomDev, Dev, Мистер, Мистр, Бум, FNaF, ФНаФ, Multiplayer, Мультиплеер, Андроид, Android, Mobile" />
-	</head>
-	<body>
-		<div id="app">
-			<site-header></site-header>
+<site-header></site-header>
+
+<h1>Данная страница в настоящий момент находится в стадии рефакторинга. Простите</h1>
+
+<div id="banner-holder">
+	<img id="banner" src="./img/banner/fnafm.jpg" />
+</div>
+
+<main>
+	<div class="content">
+		<h1>Title</h1>
+		<p>Описание...</p>
+		<boom-button class="neon">Скачать</boom-button>
+		<boom-button class="neon">Исходники</boom-button>
+		<p>Коменентарии...</p>
+	</div>
+</main>
+<site-footer></site-footer>
 			
-			<div id="app-holder">
-				<div id="banner-holder">
-					<img id="banner" src="./img/banner/fnafm.jpg" />
-					<div id="banner-overlay"></div>
-				</div>
+			
+			
+<!--<div id="app-holder">
+	<div id="banner-holder">
+		<img id="banner" src="./img/banner/fnafm.jpg" />
+		<div id="banner-overlay"></div>
+	</div>
 				
-				<div id="about">
-					<div class="general content reveal">
-						<div id="main">
-							<h1 id="title">FNaF Multiplayer</h1>
-							<div id="meta">
-								<span class="material-symbols-outlined">schedule</span>
-								<span id="updated">Загрузка...</span>
-								<span class="material-symbols-outlined">description</span>
-								<span id="size">Загрузка...</span>
-								<span class="material-symbols-outlined">file_download</span>
-								<span id="downloads">Загрузка...</span>
-								<span class="exclude">Версия: </span>
-								<span id="version">Загрузка...</span>
-							</div>
-						</div>
+	<div id="about">
+		<div class="general content reveal">
+			<div id="main">
+				<h1 id="title">FNaF Multiplayer</h1>
+				<div id="meta">
+					<span class="material-symbols-outlined">schedule</span>
+					<span id="updated">Загрузка...</span>
+					<span class="material-symbols-outlined">description</span>
+					<span id="size">Загрузка...</span>
+					<span class="material-symbols-outlined">file_download</span>
+					<span id="downloads">Загрузка...</span>
+					<span class="exclude">Версия: </span>
+					<span id="version">Загрузка...</span>
+				</div>
+			</div>
 						
-						<div id="actions">
-							<a href="#" id="open"><button neon>Скачать</button></a>
-							<a href="#" id="source"><button neon>Исходники</button></a>
-						</div>
+			<div id="actions">
+				<a href="#" id="open"><button neon>Скачать</button></a>
+				<a href="#" id="source"><button neon>Исходники</button></a>
+			</div>
 						
-						<div>
-							<p id="description-text">Загрузка...</p>
-						</div>
+			<div>
+				<p id="description-text">Загрузка...</p>
+			</div>
 						
-						<div>
-							<h2 class="cat">Последнее обновление</h2>
-							<p id="update-text">Загрузка...</p>
-						</div>
+			<div>
+				<h2 class="cat">Последнее обновление</h2>
+				<p id="update-text">Загрузка...</p>
+			</div>
 						
-						<div id="screenshots">
-							<h2 class="cat">Скриншоты</h2>
-						</div>
+			<div id="screenshots">
+				<h2 class="cat">Скриншоты</h2>
+			</div>
 						
-						<div id="comments">
-							<div id="disqus_thread"><h1>Hello World!</h1></div>
-							<script>
-								let disqus_config = function () {
-									this.page.url = "https://mrboomdeveloper.github.io";
+			<div id="comments">
+				<div id="disqus_thread"><h1>Hello World!</h1></div>
+				<script>
+								const disqus_config = function () {
+									this.page.url = "https://mrboomdev.ddns.net";
 									this.page.identifier = "PAGE_ID";
 								};
-								(function() {
-									const d = document, s = d.createElement('script');
+								(function(d) {
+									const s = d.createElement('script');
 									s.src = 'https://mrboomdev.disqus.com/embed.js';
 									s.setAttribute('data-timestamp', + new Date());
 									(d.head || d.body).appendChild(s);
-								})();
-							</script>
-						</div>
-					</div>
-					<site-footer></site-footer>
-				</div>
+								})(document);
+				</script>
 			</div>
 		</div>
-	</body>
-</html>
+		<site-footer></site-footer>
+	</div>
+</div>-->
+
+

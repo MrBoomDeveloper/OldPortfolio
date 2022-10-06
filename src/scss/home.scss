@@ -12,71 +12,20 @@
 
 $textColor: hsl(227, 20%, 61%);
 
-boom-article {
-	@include card(0);
-	display: block;
+.card:is(input, textarea) {
+	color: white;
+	padding: .8em;
+	background-color: $surface;
+	border: solid 1px $surfaceActive;
+	outline: none;
+	border-radius: .3rem;
 	
-	&.clickable:active {
-		transform: scale(.97);
+	&:focus {
+		border: solid 1px $primary;
 	}
 	
-	> div {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		
-		.details {
-			flex-grow: 1;
-		}
-	}
-	
-	&:not(:has(p)) > div h3 {
-		flex-grow: 1;
-		margin-bottom: .2em;
-	}
-	
-	&:not(:has(img)) > div p {
-		flex-grow: 1;
-	}
-	
-	img {
-		object-fit: cover;
-		aspect-ratio: 16 / 9;
-	}
-	
-	.details {
-		padding: 1rem;
-		display: flex;
-		flex-direction: column;
-		gap: .4rem;
-		
-		.highlight {
-			font-size: .85em;
-			color: $primary;
-		}
-		
-		h3 {
-			font-size: 1.2em;
-		}
-		
-		p {
-			@include lines(3);
-			font-size: .9em;
-			line-height: 1.6;
-			margin-bottom: .2em;
-		}
-	
-		.tags {
-			display: flex;
-			flex-wrap: wrap;
-			gap: .4rem;
-		}
-	}
-	
-	&.product {
-		img {
-			border-radius: .5rem .5rem 0 0;
-		}
+	&::placeholder {
+		color: #CAC;
 	}
 }
 

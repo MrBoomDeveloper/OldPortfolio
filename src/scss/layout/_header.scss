@@ -105,6 +105,16 @@ site-header {
 }
 
 @media (max-width: 750px) {
+	#app {
+		&:has(nav.active) > :not(site-header) {
+			opacity: .5;
+		}
+		
+		> :not(site-header) {
+			transition: .3s;
+		}
+	}
+	
 	site-header {
 		header a {
 			flex-grow: 1;

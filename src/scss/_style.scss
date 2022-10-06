@@ -25,36 +25,9 @@
 	}
 }
 
-#loader {
-	position: fixed;
-	z-index: -999;
-	top: calc(50% - 1rem);
-	left: calc(50% - 1rem);
-	width: 3rem;
-	height: 3rem;
-	border: solid $primary .3rem;
-	border-top: solid #222 .3rem;
-	border-radius: 100%;
-	animation: loading .6s linear infinite;
-
-	&.finished {
-		transition: 1s;
-		opacity: 0;
-	}
-}
-
-@keyframes loading {
-	from {
-		transform: rotate(0deg)
-	}
-	to {
-		transform: rotate(360deg)
-	}
-}
-
 .cat {
 	color: $title;
-	font-size: 1.6em;
+	font-size: 1.7em;
 	margin-bottom: .5em;
 
 	&::before {
@@ -68,3 +41,11 @@
 		background-color: $primary;
 	}
 }
+
+@media (max-width: 750px) {
+	.cat {
+		font-size: 1.8em;
+	}
+}
+
+

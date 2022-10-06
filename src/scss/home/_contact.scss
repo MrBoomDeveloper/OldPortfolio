@@ -3,94 +3,72 @@
 	margin-bottom: 0;
 	background-color: rgb(0 0 0 / .08);
 	
-	input, textarea, boom-button, p {
-		width: 100%;
-		
-		&::placeholder {
-			color: rgb(200 200 200 / .5);
-		}
-	}
-	
-	textarea {
-		min-height: 5rem;
-	}
-		
-	boom-button {
-		margin-top: .5rem;
-	}
-	
 	form {
-		margin-block: 2rem;
 		display: flex;
 		flex-direction: column;
-		gap: .6rem;
-	}
+		gap: .5rem;
+		
+		input, textarea, boom-button {
+			width: 100%;
+		}
 	
-	.content {
-		padding-bottom: 0;
-		margin-bottom: 0;
+		boom-button {
+			margin-top: .6rem;
+		}
 	}
 	
 	.text {
-		height: 100%;
 		display: flex;
 		flex-direction: column;
-		padding-bottom: 2rem;
 		
-		.main-description {
+		.description {
 			flex-grow: 1;
 		}
+	
+		.social-description {
+			margin-block: .6rem;
+		}
+	
+		.social {
+			display: flex;
+			gap: 1rem;
 		
-		.also {
-			margin-top: .2rem;
-			font-weight: 600;
-			
-			.social {
-				display: flex;
-				gap: 1rem;
-				margin-top: .4rem;
+			a:nth-child(2) {
+				margin-right: .3rem;
 			}
 		}
 	}
 }
 
 @media (min-width: 750px) {
-	#contact {
-		.text p {
-			padding-right: 4rem;
-		}
-		
-		form {
-			display: flex;
-			align-items: flex-end;
-			margin-top: 0;
-		}
-		
-		.content {
-			grid-template-columns: 1fr 1fr;
-			gap: 1rem;
-		}
-		
-		lottie-player {
-			width: min(25rem, 100%)
-		}
+	#contact .content {
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
 	}
 }
 
 @media (max-width: 750px) {
 	#contact {
-		padding-top: 2rem;
-		
-		.cat {
-			margin-bottom: .6em;
+		form {
+			gap: .6rem;
+			
+			input, textarea {
+				font-size: 1.05em;
+			}
+			
+			textarea {
+				height: 8rem;
+			}
 		}
 		
-		input, textarea, button, p {
-			width: 100%;
+		p {
+			font-size: 1.05em;
 		}
 		
-		lottie-player {
-			width: min(20rem, 75%);
+		.social {
+			margin-block: .3rem 2rem;
 		}
 	}
 }
+
+

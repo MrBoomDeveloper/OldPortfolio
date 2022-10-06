@@ -15,7 +15,7 @@ module.exports = {
 	"rules": {
 		"semi": ["error", "always"],
 		"max-lines-per-function": ["error", 20],
-		"max-len": ["error", { "code": 80, "ignoreUrls": true, "ignoreStrings": true }],
+		"max-len": ["error", { "code": 85, "ignoreUrls": true, "ignoreStrings": true }],
 		"no-alert": "error",
 		"no-var": "error",
 		"arrow-spacing": "error"
