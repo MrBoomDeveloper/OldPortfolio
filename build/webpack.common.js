@@ -15,8 +15,9 @@ module.exports = {
 		getHtml("index"), getHtml("project"),
 		new CopyPlugin({
 			patterns: [
-				{ from: "./src/img", to: "./img" },
-				{ from: "./src/other", to: "./" }
+				{ from: "./src/assets/img", to: "./img" },
+				{ from: "./src/assets/config", to: "./" },
+				{ from: "./src/assets/favicon", to: "./" }
 			]
 		}),
 		new ESLintPlugin()

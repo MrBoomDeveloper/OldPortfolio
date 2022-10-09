@@ -40,6 +40,7 @@ site-header {
 		a {
 			font-family: "Roboto", sans-serif;
 			pointer-events: auto;
+			transition: .3s;
 					
 			&:hover {
 				color: white;
