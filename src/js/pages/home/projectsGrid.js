@@ -1,4 +1,4 @@
-import { el, els } from "boomutil";
+import { el, els, BoomDialog } from "boomutil";
 
 let data = {};
 let cats = [];
@@ -52,6 +52,25 @@ function showProjects(json) {
 			</boom-article></a>`;
 		}, "");
 	})(json);
+	
+	checkIfUndefined();
+}
+
+function checkIfUndefined() {
+	for(const item of els("#projects .grid > a")) {
+		if(item.href.endsWith("undefined")) {
+			item.href = "javascript:void(0)";
+			item.onclick = () => {
+				new BoomDialog({
+					title: "Проект не найден!",
+					description: "Похоже, что ссылка на данный проект не была найдена. Скорее всего проект больше не доступен для скачивания. Извините, что подобное случилось.",
+					buttons: [{
+						title: "Понятно"
+					}]
+				}).show();
+			};
+		}
+	}
 }
 
 

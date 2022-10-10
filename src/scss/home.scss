@@ -8,25 +8,4 @@
 	max-width: 100%;
 }
 
-//EARLY UPDATES FOR LIBRARY
-
-$textColor: hsl(227, 20%, 61%);
-
-.card:is(input, textarea) {
-	color: white;
-	padding: .8em;
-	background-color: $surface;
-	border: solid 1px $surfaceActive;
-	outline: none;
-	border-radius: .3rem;
-	
-	&:focus {
-		border: solid 1px $primary;
-	}
-	
-	&::placeholder {
-		color: #CAC;
-	}
-}
-
 
