@@ -47,7 +47,7 @@ function showProjects(json) {
 			const { title, description, tags, banner, link, highlight } = item;
 			return html + `<a href="${link}" class="reveal from-right">
 			<boom-article title="${title}" class="product" tags="${tags}"
-				banner="${banner ? (`./img/banner/${banner}.jpg`) : undefined}"
+				banner="${banner ? (`./img/large_art/${banner}.jpg`) : undefined}"
 				highlight="${highlight}" description="${description}">
 			</boom-article></a>`;
 		}, "");

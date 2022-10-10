@@ -1,11 +1,16 @@
 require("./default");
-import { el, initReveal } from "boomutil";
+import { el, initReveal, revealNow } from "boomutil";
 import { initHeader } from "./layout/header";
 import { loadProjects } from "./pages/home/projectsGrid";
 import "../scss/home.scss";
 
 initHeader(window, true);
 setTimeout(() => initReveal(window, 125), 250);
+
+//Fixes hero section from being not fully revealed
+for(const item of ["#hero p", "#hero .button-holder"]) {
+	revealNow(el(item));
+}
 
 import("../json/skills.json").then(data => {
 	el("#skills .grid").innerHTML = (list => {

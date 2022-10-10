@@ -1,3 +1,5 @@
+$heroHeight: 100vh;
+
 .hero.content {
 	&::before {
 		content: "";
@@ -6,13 +8,13 @@
 		display: block;
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		height: $heroHeight;
 		background-image: linear-gradient(
 	        #17092a 0%,
 	        $none 95%
 	    );
 	}
-} 
+}
 
 #hero {
 	display: flex;

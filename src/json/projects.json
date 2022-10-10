@@ -1,17 +1,9 @@
 {
 	"all": {
-		"cartoon": {
-			"title": "В Разработке",
-			"highlight": "Даже не начал делать",
-			"tags": "Не_Определился",
-			"link": "404"
-		},
-		
 		"anime": {
 			"title": "BoomAnime",
 			"highlight": "Каталог аниме-сериалов",
-			"tags": "JavaScript,CSS,API",
-			"link": "404"
+			"tags": "JavaScript,CSS,API"
 		},
 		
 		"studio": {
