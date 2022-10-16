@@ -21,7 +21,8 @@
 			"tags": "Java,JavaScript,Python", 
 			"banner": "fnafm",
 			"description": "Вступите в борьбу с одержимыми аниматронными машинами. Захватывающая мобильная игра в жанре экшн-платформер с любимыми персонажами.",
-			"link": "https://gamejolt.com/games/fnafmultiplayer/670228"
+			"link": "./project?name=fnafm",
+			"repo": "MrBoomDeveloper/boomstudio"
 		},
 		
 		"kitchen": {

@@ -5,7 +5,7 @@ import { loadProjects } from "./pages/home/projectsGrid";
 import "../scss/home.scss";
 
 initHeader(window, true);
-setTimeout(() => initReveal(window, 125), 250);
+setTimeout(() => initReveal(window, 100), 250);
 
 //Fixes hero section from being not fully revealed
 for(const item of ["#hero p", "#hero .button-holder"]) {
