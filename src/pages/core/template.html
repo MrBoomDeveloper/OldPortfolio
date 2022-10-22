@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru" class="loading">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0">
+	
+	<title><%= htmlWebpackPlugin.options.title %></title>
+	<meta name="apple-mobile-web-app-title" content="MrBoomDev">
+	<meta name="application-name" content="MrBoomDev">
+	<link rel="canonical" href="https://mrboomdev.ru/<%= htmlWebpackPlugin.options.path %>"/>
+	<meta property="og:site_name" content="MrBoomDev.ru">
+	<meta property="og:url" content="https://mrboomdev.ru/<%= htmlWebpackPlugin.options.path %>"/>
+	
+	<meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+	<meta name="keywords" content="MrBoomDev, Разработчик, MrBoomDeveloper, FNaF, Multiplayer">
+	<meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>"/>
+	<meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>"/>
+	<meta property="og:image" content="/android-chrome-192x192.png">
+	
+	<meta name="msapplication-TileColor" content="#9f00a7">
+	<meta name="theme-color" content="#11071F">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="manifest" href="/site.webmanifest">
+	
+	<% if(!htmlWebpackPlugin.options.isProd) { %>
+	<script src="https://cdn.jsdelivr.net/npm/eruda"></script><script>eruda.init();</script>
+	<% } %>
+	
+	<style>html.loading{background:#11071F}html.loading body{opacity:0}</style>
+</head>
+<body>
+	<div id="app" class="reveal">
+		<%= htmlWebpackPlugin.options.body %>
+	</div>
+</body>
+
+

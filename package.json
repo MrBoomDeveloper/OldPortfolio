@@ -1,36 +1,27 @@
 {
 	"name": "portfolio",
-	"version": "1.0.1",
-	"description": "README.md",
+	"version": "1.0.2",
 	"scripts": {
-		"dev": "webpack serve --mode development --open --config build/webpack.dev.js",
-		"prod": "webpack --mode production --config build/webpack.prod.js"
+		"dev": "webpack serve --mode development --open --config config/build/webpack.dev.js",
+		"prod": "webpack --mode production --config config/build/webpack.prod.js"
 	},
-	"keywords": [
-		"mrboomdev",
-		"site",
-		"js",
-		"webpack",
-		"scss",
-		"sass",
-		"css"
-	],
-	"author": "MrBoomDev",
 	"license": "ISC",
 	"devDependencies": {
 		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.7.1",
-		"eslint": "^8.24.0",
+		"eslint": "^7.32.0",
 		"eslint-webpack-plugin": "^3.2.0",
 		"html-webpack-plugin": "^5.5.0",
 		"sass": "^1.55.0",
 		"sass-loader": "^13.0.2",
 		"style-loader": "^3.3.1",
+		"ts-loader": "^9.4.1",
+		"typescript": "^4.8.4",
 		"webpack": "^5.74.0",
 		"webpack-cli": "^4.2.0",
 		"webpack-dev-server": "^4.11.1"
 	},
 	"dependencies": {
-		"boomutil": "^1.0.6"
+		"boomutil": "^1.0.9"
 	}
 }

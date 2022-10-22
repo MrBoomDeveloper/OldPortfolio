@@ -1,0 +1,48 @@
+.aboutme.block {
+	padding-block: 3rem .1rem;
+	background-color: rgb(0 0 0 / .1);
+	
+	p {
+		color: $title;
+		font-size: 1.05em;
+		
+		span {
+			color: $light;
+		}
+	}
+	
+	.quickbar {
+		margin-top: 1rem;
+		display: flex;
+		gap: 1.2rem;
+		
+		.details {
+			span {
+				margin-bottom: .4em;
+				display: block;
+			}
+			
+			h3 {
+				font-size: 1.4em;
+			}
+		}
+		
+		.seprecator {
+			display: block;
+			background-color: #EEE;
+			opacity: .8;
+			height: fill-content;
+			width: 1px;
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	.aboutme.block {
+		.quickbar {
+			font-size: 1.05em;
+		}
+	}
+}
+
+

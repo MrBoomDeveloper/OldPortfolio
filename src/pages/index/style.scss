@@ -1,0 +1,16 @@
+@import "../core/style",
+	"~Components/block/style", 
+	"sections/projects",
+	"sections/aboutme", 
+	"sections/skills", 
+	"sections/hero", 
+	"sections/faq", 
+	"sections/contact";
+
+.center-decoration {
+	margin-top: 1rem;
+	margin-inline: auto;
+	max-width: 100%;
+}
+
+
