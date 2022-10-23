@@ -1,5 +1,5 @@
 import "../core";
-import { initReveal, getParam, BoomDialog } from "boomutil";
+import { el, initReveal, getParam, BoomDialog } from "boomutil";
 import { initHeader } from "Components/header";
 import { fillProjectData } from "Features/projectDataFill";
 const github = require("Data/github");
@@ -25,6 +25,11 @@ async function getPackageData(repo) {
 		console.error(e);
 	}
 }
+
+el(".expand").onclick = function() {
+	el("#disqus_thread").classList.add("expanded");
+	setTimeout(() => this.remove(), 250);
+};
 
 (async () => {
 	const projectsArray = await import("Data/projects.json");

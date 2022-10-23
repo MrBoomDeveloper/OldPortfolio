@@ -1,7 +1,8 @@
-import { el, formatGithubDate, formatBytes, formatDate, createElement } from "boomutil";
+import { el, els, formatGithubDate, formatBytes, formatDate, createElement } from "boomutil";
 import { arrayToUl } from "Features/generateUl";
 
-interface Stats {
+interface Release {
+	name: string,
 	size: number,
 	download_count: number,
 	updated_at: string
@@ -15,10 +16,13 @@ interface Data {
 	release?: any,
 	highlight?: string,
 	html_url?: string,
-	screenshots?: Screenshot[]
+	screenshots?: Screenshot[],
+	tag_name?: string,
+	name?: string,
+	body?: string
 }
 
-function getStats({ size, download_count, updated_at }: Stats) {
+function getStats({ size, download_count, updated_at }: Release) {
 	return arrayToUl([
 		{ gicon: "save", title: formatBytes(size) },
 		{ gicon: "download", title: download_count },
@@ -26,26 +30,35 @@ function getStats({ size, download_count, updated_at }: Stats) {
 	]);
 }
 
-export function fillProjectData(data: Data) {
+export function fillProjectData(data: any) {
 	fillProjectGeneral(data, el("main"));
 	fillProjectOther(data);
 	fillDetails(data);
 }
 
-function fillProjectGeneral(data: Data, parent: HTMLElement) {
+interface generalData {
+	title: string,
+	description: string,
+	release: Release,
+	highlight: string
+}
+
+function fillProjectGeneral(data: generalData, parent: HTMLElement) {
 	const { title, description, release, highlight } = data;
 	el(parent, ".highlight").innerText = highlight;
 	el(parent, ".title").innerText = title;
 	el(parent, ".description").innerHTML = description;
 	el(parent, ".details").innerHTML = getStats(release);
-	console.log(data);
+	fillUpdage(data);
 }
 
-function fillProjectOther({ banner, description, release, html_url, screenshots }: Data) {
-	el("#banner").src = `./img/large_art/${banner}.jpg`;
+function fillProjectOther({ banner, description, release: { browser_download_url }, html_url, screenshots }: Data) {
+	for(const bannerElement of els(".banner")) {
+		bannerElement.src = `./img/large_art/${banner}.jpg`;
+	}
 	el("section.description p").innerHTML = description;
 	el("main .actions").innerHTML = `
-		<a href="${release.browser_download_url}">
+		<a href="${browser_download_url}">
 			<boom-button class="fill">Скачать</boom-button>
 		</a>
 		<a href="${html_url}">
@@ -64,21 +77,32 @@ function fillScreenshots(items: Screenshot[]) {
 	if(items) {
 		throw new Error("Not yet implemented!");
 	} else {
-		el("section.screenshots").style.display = "none";
+		el("section.screenshots").remove();
 	}
 }
 
-function fillDetails(items: Data) {
+interface detailsData {
+	release: Release,
+	tag_name: string,
+	tags: string
+}
+
+function fillUpdage({ name, body }: Data) {
+	createElement("div", {}, {
+		html: `<h3>${name}</h3><p>${body}</p>`,
+		parent: el("section.update")
+	});
+}
+
+function fillDetails({ release, tag_name, tags }: detailsData) {
 	createElement("ul", { class: "details-grid" }, {
 		html: arrayToUl([
 			{
-				title: "test"
-			},
-			{
-				title: "test1"
-			},
-			{
-				title: "test2"
+				title: "Название", value: release.name
+			}, {
+				title: "Версия", value: tag_name
+			}, {
+				title: "Теги", value: tags.replaceAll(",", ", ")
 			}
 		]),
 		parent: el("section.details")

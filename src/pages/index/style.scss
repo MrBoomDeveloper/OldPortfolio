@@ -13,4 +13,70 @@
 	max-width: 100%;
 }
 
+//FUTURE LIB UPDATE
+
+/*%placeholder {
+	color: #CAC;
+}
+
+boom-input {
+	position: relative;
+	
+	::placeholder {
+		@extend %placeholder;
+	}
+	
+	&::after {
+		@extend %placeholder;
+		display: block;
+		content: attr(placeholder);
+		top: .6em;
+		left: .4em;
+		padding: .2em .4em 0 .4em;
+		position: absolute;
+		background-color: $surface;
+		border: solid 1px $surfaceActive;
+		border-bottom: none;
+		border-radius: .3rem;
+		transition: .2s;
+		transition-delay: 0s;
+	}
+	
+	&:has(:blank) {
+		input::after {
+			animation: test .1s;
+			opacity: 0;
+		}
+	}
+	
+	&:has(:not(:placeholder-shown)) {
+		::placeholder {
+			color: red;
+		}
+		
+		&::after {
+			animation: test .2s reverse;
+			top: -.8em;
+			transition-delay: 0s;
+			font-size: .8em;
+		}
+	}
+}
+
+@keyframes test {
+	0% {
+		display: none;
+		opacity: 1;
+	}
+	
+	99% {
+		 
+	}
+	
+	100% {
+		display: none;
+		opacity: 0;
+	}
+}*/
+
 

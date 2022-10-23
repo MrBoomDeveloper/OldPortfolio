@@ -1,15 +1,43 @@
 {
 	"all": [
-		{ "title": "JavaScript", "icon": "js" },
-		{ "title": "Java" },
-		{ "title": "Android" },
-		{ "title": "NodeJS", "icon": "node" },
-		{ "title": "Git" },
-		{ "title": "Npm" },
-		{ "title": "Firebase" },
-		{ "title": "Webpack" },
-		{ "title": "Sass" },
-		{ "title": "CSS" },
-		{ "title": "HTML" }
+		{
+			"title": "React",
+			"icon": "react"
+		}, {
+			"title": "Webpack",
+			"icon": "webpack"
+		}, {
+			"title": "TypeScript", 
+			"icon": "ts"
+		}, {
+			"title": "JavaScript", 
+			"icon": "js"
+		}, {
+			"title": "Java",
+			"icon": "java"
+		}, {
+			"title": "Android",
+			"icon": "android"
+		}, {
+			"title": "NodeJS", 
+			"icon": "node"
+		}, {
+			"title": "Git",
+			"icon": "git"
+		}, {
+			"title": "Npm",
+			"icon": "npm"
+		}, {
+			"title": "Sass",
+			"icon": "sass"
+		}, {
+			"title": "CSS",
+			"icon": "css"
+		}, {
+			"title": "HTML",
+			"icon": "html"
+		}
 	]
 }
+
+

@@ -16,12 +16,17 @@
 		height: 100%;
 	}
 
-	#banner {
+	.banner {
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
 		opacity: .9;
 	}
+}
+
+main .banner {
+	border-radius: .6rem;
+	box-shadow: 4px 4px 1rem rgb(0 0 0 / .4);
 }
 
 @media (min-width: 750px) {
@@ -38,6 +43,11 @@
 			);
 		}
 	}
+	
+	main .banner {
+		grid-column: 2 / 2;
+		opacity: 0;
+	}
 }
 
 @media (max-width: 750px) {
@@ -48,6 +58,11 @@
 				$background
 			);
 		}
+	}
+	
+	main .banner {
+		width: 100%;
+		margin-bottom: 2.5rem;
 	}
 }
 

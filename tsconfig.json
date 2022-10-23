@@ -3,6 +3,7 @@
 		"outDir": "./docs",
 		"noImplicitAny": true,
 		"module": "es6",
+		"lib": [ "es2021", "dom" ],
 		"target": "es6",
 		"allowJs": true,
 		"moduleResolution": "node",

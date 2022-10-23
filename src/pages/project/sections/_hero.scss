@@ -1,14 +1,18 @@
 main {
-	height: 100vh;
 	margin-bottom: 1rem;
-
+	
 	.content {
+		height: 100%;
+	}
+
+	.text {
+		grid-column: 1 / 2;
+		grid-row: 1 / 1;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: .4rem;
 		justify-content: center;
-
 	}
 
 	.info {
@@ -82,7 +86,12 @@ main {
 
 @media (min-width: 750px) {
 	main {
+		height: 100vh;
+		
 		.content {
+			align-items: center;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 			$mainWidth: 22rem;
 
 			.info, .actions {
@@ -94,8 +103,8 @@ main {
 
 @media (max-width: 750px) {
 	main {
+		padding-top: 7.5rem;
 		text-align: center;
-		height: 75vh;
 		$mainWidth: min(25rem, 85%);
 		
 		.content {
