@@ -2,7 +2,8 @@
 	"name": "portfolio",
 	"version": "1.0.2",
 	"scripts": {
-		"dev": "webpack serve --mode development --open --config config/build/webpack.dev.js",
+		"local": "webpack serve --mode development --config config/build/webpack.dev.js --host 192.168.1.126",
+		"dev": "webpack serve --mode development --config config/build/webpack.dev.js",
 		"prod": "webpack --mode production --config config/build/webpack.prod.js"
 	},
 	"license": "ISC",

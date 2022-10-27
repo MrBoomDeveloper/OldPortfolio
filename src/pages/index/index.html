@@ -7,7 +7,7 @@
 				<span>Фронтенд-Разработчик</span>
 				<h1 class="reveal from-bottom">Привет, я MrBoomDev!</h1>
 				<p class="reveal from-bottom">
-					Пишу веб-приложения и просто обожаю красивые интерфейсы! Люблю рисовать, создавать и дизайнить. Также в свободное время занимаюсь разработкой своей мобильной игры.
+					Пишу веб-приложения и просто обожаю красивые веб интерфейсы!
 				</p>
 				<a href="#projects" class="reveal from-bottom button-holder">
 					<boom-button class="neon">Взглянуть на проекты</boom-button>
@@ -21,6 +21,41 @@
 			</div>
 		</section>
 	</div>
+	
+	<!--<section id="skills_new" class="skills-block block thicc reveal from-bottom">
+		<div class="content">
+			<h2>Мои навыки</h2>
+			<p>Технологии, которые я использую в своих проектах</p>
+			<div class="skills-content">
+				<img src="lightningbolt.png" alt="Иконка молнии" title="Иконка молнии">
+				<div class="skills-row">
+					<span>Фронтенд:</span>
+					<boom-item icon="typescript" title="React" class="tag"></boom-item>
+					<boom-item icon="test" title="TypeScript" class="tag"></boom-item>
+					<boom-item icon="bruh" title="JavaScript" class="tag"></boom-item>
+					<boom-item title="Webpack" class="tag"></boom-item>
+					<boom-item title="Sass" class="tag"></boom-item>
+					<boom-item title="CSS" class="tag"></boom-item>
+					<boom-item title="HTML" class="tag"></boom-item>
+				</div>
+				
+				<div class="skills-row">
+					<span>Приложения:</span>
+					<boom-item title="Android" class="tag"></boom-item>
+					<boom-item title="Java" class="tag"></boom-item>
+					<boom-item title="LibGDX" class="tag"></boom-item>
+					<boom-item title="NodeJs" class="tag"></boom-item>
+					<boom-item title="Python" class="tag"></boom-item>
+				</div>
+				
+				<div class="skills-row">
+					<span>Инструменты:</span>
+					<boom-item title="Git" class="tag"></boom-item>
+					<boom-item title="Npm" class="tag"></boom-item>
+				</div>
+			</div>
+		</div>
+	</section>-->
 
 	<section id="skills" class="skills block swap reveal from-bottom">
 		<div class="content">
@@ -107,7 +142,7 @@
 				
 				<boom-faq class="reveal from-right"
 					title="Что это за розовая коала?"
-					description="Это не коала, а медведь! Вдохновлен он был с персонажа Funtime Freddy игры Five Nights at Freddy's: Sister Location.">
+					description="Это не коала, а медведь! Вдохновлен он был с персонажа Funtime Freddy из игры Five Nights at Freddy's: Sister Location.">
 				</boom-faq>
 			</div>
 		</div>
@@ -123,18 +158,17 @@
 				
 				<p class="social-description reveal from-left">Я доступен в следующих соц-сетях:</p>
 				<div class="social reveal from-left">
-					<a href="https://bit.ly/mrboomdevvk"><img src="./img/social/vk.png"></a>
-					<a href="https://bit.ly/mrboomdevtg"><img src="./img/social/tg.png"></a>
-					<a href="https://bit.ly/mrboomdevds"><img src="./img/social/ds.png"></a>
+					<a href="https://vkontakte.mrboomdev.ru"><img src="./img/social/vk.png"></a>
+					<a href="https://discord.mrboomdev.ru"><img src="./img/social/ds.png"></a>
 				</div>
 			</div>
 			
 			<form class="reveal from-right" method="post" action="https://send.pageclip.co/VoMFoh1dOuY1FWGpkTJQacY4vVmrSxUa">
 				<boom-input name="name" placeholder="Ваше имя" type="text" class="neon">
-					<input class="card" type="text" name="name" placeholder="Ваше имя" required />
+					<input class="card" type="text" name="name" placeholder="Ваше имя" required maxlength="25"/>
 				</boom-input>
 				<input class="card" type="email" name="email" placeholder="Ваша почта" required />
-				<textarea class="card" name="text" placeholder="Текст письма" required></textarea>
+				<textarea class="card" name="text" placeholder="Текст письма" minlength="10" maxlength="250" required></textarea>
 				<boom-button class="neon">Отправить</boom-button>
 			</form>
 		</div>

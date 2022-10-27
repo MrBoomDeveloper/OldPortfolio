@@ -1,28 +1,41 @@
 {
 	"all": {
-		"anime": {
-			"title": "BoomAnime",
-			"highlight": "Каталог аниме-сериалов",
-			"tags": "JavaScript,CSS,API"
-		},
-		
 		"studio": {
-			"title": "BoomStudio", 
-			"highlight": "Мобильная IDE", 
-			"tags": "Java,Android", 
+			"title": "BoomStudio",
+			"highlight": "Мобильная IDE",
+			"tags": "Java,Android",
 			"banner": "studio",
 			"description": "Мобильный редактор кода, позволяющий использовать систему контроля версий. Во время разработки был сделан упор на максимальную мультизадачность.",
-			"link": "https://nightly.link/MrBoomDeveloper/BoomStudio/workflows/android/master/app-debug.apk.zip"
+			"link": "./project?name=studio",
+			"repo": "MrBoomDeveloper/boomstudio",
+			"screenshots": [
+				{
+					"title": "Редактор кода",
+					"src": "1.jpg"
+				}, {
+					"title": "Синхронизация с Git",
+					"src": "2.jpg"
+				}, {
+					"title": "Широкая кастомизация",
+					"src": "3.jpg"
+				}, {
+					"title": "Поддержка векторных изобркжений",
+					"src": "4.jpg"
+				}, {
+					"title": "Обзор проектов",
+					"src": "5.jpg"
+				}
+			]
 		},
 		
 		"fnafm": {
 			"title": "FNaF Multiplayer", 
 			"highlight": "Игра Мультиплеер", 
-			"tags": "Java,JavaScript,Python", 
+			"tags": "Java,JavaScript,NodeJS", 
 			"banner": "fnafm",
 			"description": "Вступите в борьбу с одержимыми аниматронными машинами. Захватывающая мобильная игра в жанре экшн-платформер с любимыми персонажами. тупите в борьбу с одержимыми аниматронными машинами. Захватывающая мобильная игра в жанре экшн-платформер с любимыми персонажами.",
 			"link": "./project?name=fnafm",
-			"repo": "MrBoomDeveloper/boomstudio"
+			"repo": "MrBoomDeveloper/fnafm-game"
 		},
 		
 		"kitchen": {

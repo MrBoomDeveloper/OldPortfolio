@@ -13,7 +13,23 @@
 	max-width: 100%;
 }
 
-//FUTURE LIB UPDATE
+
+/**********FUTURE LIB UPDATES***********/
+
+$surfaceSmall: red;
+
+//BOOMITEM TAG
+
+/*boom-item.tag {
+	//TODO: ДОДЕЛАТЬ!important!important!important
+	> div {
+		background-color: $surfaceSmall;
+		display: flex;
+	}
+}*/
+
+
+//CUSTOM INPUT ELEMENT
 
 /*%placeholder {
 	color: #CAC;

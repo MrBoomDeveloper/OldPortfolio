@@ -14,7 +14,8 @@
 		"paths": {
 			"Components/*": ["components/*"],
 			"Features/*": ["features/*"],
-			"Data/*": ["data/*"]
+			"Data/*": ["data/*"],
+			"Pages/*": ["pages/*"]
 		}
 	},
 	

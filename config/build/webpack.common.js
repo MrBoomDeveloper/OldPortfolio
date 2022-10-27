@@ -6,7 +6,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 const isProd = process.argv[process.argv.indexOf('--mode') + 1] == "production";
 
-const pages = [ "index", "project", "terms" ];
+const pages = [ "index", "project", "terms", "login" ];
 
 const htmlEntry = pages.map(name => {
 	return new HtmlWebpackPlugin({
@@ -58,9 +58,10 @@ module.exports = {
 	resolve: {
 		symlinks: false,
 		alias: {
-			Features: path.resolve(__dirname, "../../src/features/"),
-			Data: path.resolve(__dirname, "../../src/data/"),
-			Components: path.resolve(__dirname, "../../src/components")
+			Features: path.resolve(__dirname, "../../src/features"),
+			Data: path.resolve(__dirname, "../../src/data"),
+			Components: path.resolve(__dirname, "../../src/components"),
+			Pages: path.resolve(__dirname, "../../src/pages")
 		},
 
 		extensions: [ ".ts", ".js", ".json", ".scss" ]

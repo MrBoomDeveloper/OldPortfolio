@@ -5,7 +5,12 @@ module.exports = merge(common, {
 	mode: "development",
 	devtool: "inline-source-map",
 	devServer: {
-		static: "./docs"
+		static: "./docs",
+		magicHtml: true,
+		
+		client: {
+			progress: true
+		}
 	},
 	
 	optimization: {

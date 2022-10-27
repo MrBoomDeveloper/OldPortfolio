@@ -71,6 +71,11 @@ $heroHeight: 100vh;
 		$heroHeight: min(100vh, 30rem);
 		height: $heroHeight;
 		
+		.info {
+			flex-grow: 0;
+			max-width: 24rem;
+		}
+		
 		.image {
 			z-index: -1;
 			position: absolute;
