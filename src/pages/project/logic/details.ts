@@ -1,6 +1,6 @@
 import { el, createElement } from "boomutil";
 import { arrayToUl } from "Features/generateUl";
-import { Release } from "Features/projectDataFill";
+import { Release } from "./fillData";
 
 interface Details {
 	release: Release,
@@ -22,3 +22,5 @@ export function fillDetails({ release, tag_name, tags }: Details) {
 		parent: el("section.details")
 	});
 }
+
+

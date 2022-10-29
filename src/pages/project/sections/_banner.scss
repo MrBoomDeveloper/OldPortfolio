@@ -31,6 +31,8 @@ main .banner {
 
 @media (min-width: 750px) {
 	.banner-holder {
+		height: min(100%, 50vw);
+		
 		&::after {
 			background: linear-gradient(90deg,
 				$background 0% 10rem,
@@ -52,6 +54,8 @@ main .banner {
 
 @media (max-width: 750px) {
 	.banner-holder {
+		filter: brightness(.8);
+		
 		&::after {
 			background: linear-gradient(
 				$none,

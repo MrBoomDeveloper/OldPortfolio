@@ -22,25 +22,11 @@
 
 <div class="info">
 	<div class="content">
-		<div class="general">
-			<section class="screenshots">
-				<h3>Скриншоты</h3>
-				<div class="screenshots-gallery"></div>
-			</section>
+		<section class="screenshots">
+			<h3>Скриншоты</h3>
+			<div class="screenshots-gallery"></div>
+		</section>
 			
-			<section class="description">
-				<h3>Описание</h3>
-				<p></p>
-			</section>
-
-			<section class="comments">
-				<div id="disqus_thread"></div>
-				<div class="expand">
-					<p>Нажмите, чтобы читать дальше...</p>
-				</div>
-			</section>
-		</div>
-
 		<aside>
 			<section class="update"></section>
 			
@@ -48,6 +34,18 @@
 				<h3>Информация об файле</h3>
 			</section>
 		</aside>
+			
+		<section class="description">
+			<h3>Описание</h3>
+			<p></p>
+		</section>
+
+		<section class="comments">
+			<div id="disqus_thread"></div>
+			<div class="expand">
+				<p>Нажмите, чтобы читать дальше...</p>
+			</div>
+		</section>
 	</div>
 </div>
 
@@ -57,7 +55,7 @@
 	var params = new URLSearchParams(location.search);
 	var disqus_config = function () {
 		this.page.url = window.location.href.replace("/project?name=", "/project/");
-		this.page.identifier = `project_${params.get("name") ?? "fnafm"}`;
+		this.page.identifier = `project_${params.get("name") ?? "studio"}`;
 	};
 
 	(function() {

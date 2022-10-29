@@ -1,0 +1,68 @@
+section.screenshots h3 {
+	padding-bottom: .2em;
+}
+
+.screenshots-gallery {
+	.big, .small {
+		overflow-x: scroll;
+		scroll-behavior: smooth;
+		display: flex;
+		
+		li {
+			flex-shrink: 0;
+			
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	
+	.big {
+		gap: .4rem;
+		
+		li {
+			position: relative;
+			width: 30rem;
+			
+			&:not(.active) {
+				filter: brightness(50%);
+			}
+			
+			span {
+				display: none;
+			}
+		}
+	}
+	
+	.small {
+		margin-top: .4rem;
+		
+		li {
+			width: 8rem;
+			scale: .95;
+			
+			&.active {
+				outline: 1px solid white;
+			}
+			
+			&:not(.active) {
+				filter: brightness(80%);
+			}
+			
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	.screenshots-gallery .big {
+		li {
+			width: 100%;
+		}
+	}
+}
+
+

@@ -17,7 +17,7 @@ const htmlEntry = pages.map(name => {
 		isProd: isProd,
 		path: name,
 		title: "MrBoomDev - Фронтенд Разработчик",
-		description: "Я пишу свои веб-приложения и просто обожаю интерфейсы. Люблю рисовать, создавать и дизайнить. Также в свободное время занимаюсь разработкой своей мобильной игры."
+		description: "Пишу веб-приложения и просто обожаю красивые веб интерфейсы!"
 	});
 });
 
@@ -71,7 +71,8 @@ module.exports = {
 		rules: [{
 			test: /\.scss$/i,
 			include: path.resolve(__dirname, '../../src'),
-			use: ["style-loader", "css-loader", "sass-loader"]
+			use: ["style-loader", "css-loader", "sass-loader"],
+			sideEffects: true
 		},
 			{
 				test: /\.tsx?$/,

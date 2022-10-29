@@ -1,23 +1,47 @@
 import { el, els, formatBytes, formatDate, formatGithubDate } from "boomutil";
 import { arrayToUl } from "Features/generateUl";
-import { Data, Release } from "Features/projectDataFill";
+import { fillElementsSimple } from "Features/fillElements";
+import { Release } from "./fillData";
 
 interface Hero {
 	banner: string,
 	highlight: string,
 	title: string,
 	description: string,
-	release: Release
+	release?: Release
 }
 
 export function fillHero(data: Hero, parent: HTMLElement) {
 	for(const bannerElement of els(".banner")) {
 		bannerElement.src = `./img/large_art/${data.banner}.jpg`;
+		if(!data.banner) bannerElement.remove();
 	}
-	el(parent, ".highlight").innerText = data.highlight;
-	el(parent, ".title").innerText = data.title;
-	el(parent, ".description").innerHTML = data.description;
-	el(parent, ".details").innerHTML = getStats(data.release);
+	
+	fillElementsSimple({
+		".highlight": data.highlight,
+		".title": data.title,
+		".description": data.description,
+		".details": (data.release ? getStats(data.release) : "")
+	}, parent);
+	
+	if(!data.release) parent.classList.add("no-release");
+	if(!data.description) el(parent, '.description').remove();
+}
+
+interface Actions {
+	browser_download_url: string,
+	html_url: string
+}
+
+export function fillActions(actions: Actions) {
+	el("main .actions").innerHTML = `
+		<a href="${actions.browser_download_url}">
+			<boom-button class="fill">Скачать</boom-button>
+		</a>
+		<a href="${actions.html_url}">
+			<boom-button class="neon">Исходники</boom-button>
+		</a>
+	`;
 }
 
 function getStats({ size, download_count, updated_at }: Release) {

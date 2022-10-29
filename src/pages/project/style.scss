@@ -1,8 +1,10 @@
 @import "../core/style";
 @import "sections/banner",
-	"sections/hero", 
-	"sections/comments", 
+	"sections/hero",
+	"sections/screenshots",
+	"sections/comments",
 	"sections/details";
+
 
 section {
 	&.description, &.screenshots, &.details, &.update {
@@ -18,37 +20,47 @@ section {
 	}
 }
 
-@media (min-width: 750px) {
-	#footer {
-		display: block;
-		margin-top: 2rem;
+#app > .info > .content {
+	display: grid;
+	gap: 2rem 4rem;
+	
+	section.screenshots {
+		overflow: hidden;
 	}
 	
+	aside {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+}
+
+#footer {
+	display: block;
+	margin-top: 1rem;
+}
+
+@media (min-width: 750px) {
 	#app > .info > .content {
 		margin-top: -4rem;
-		display: grid;
 		grid-template-columns: 1fr 16rem;
-		gap: 2rem;
+		position: relative;
 		
-		.general {
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-			
-			section {
-				&.description {
-					flex-shrink: 1;
-					margin-bottom: 0;
-				}
+		section.description {
+			grid-column: 1 / 1;
+			grid-row: 2 / 2;
+		}
+		
+		&:not(:has(.section.screenshots)) {
+			section.description {
+				grid-row: 1 / 1;
 			}
 		}
 		
 		aside {
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-			grid-column: 2 / 2;
-			grid-row: 1 / 1;
+			right: 0;
+			top: 0;
+			position: absolute;
 		}
 	}
 }
@@ -56,23 +68,19 @@ section {
 @media (max-width: 750px) {
 	#app > .info {
 		margin-top: 3rem;
-		
-		.general {
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-		}
-		
-		aside {
-			display: flex;
-			flex-direction: column;
-			gap: 2rem;
-			margin-block: 1rem 4rem;
-		}
 	}
 	
 	section {
 		padding-inline: 1rem;
+		padding-block: .2rem;
+		
+		&.description {
+			grid-row: 2 / 2;
+		}
+		
+		&.details {
+			margin-bottom: 1rem;
+		}
 	}
 }
 

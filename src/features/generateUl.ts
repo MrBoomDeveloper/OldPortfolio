@@ -14,7 +14,7 @@ export function arrayToUl(array: UlItem[], isHeader?: boolean, result: string = 
 		result += `<li class='${isHeader ? "reveal from-top": ""}'>`;
 		if (url) result += `<a href="${url}">`;
 		if (image) {
-			result += `<img src="${image}" alt="${alt}" title="${alt}" />`;
+			result += `<img src="${image}" alt="${alt || title}" title="${alt || title}" />`;
 		}
 		if (gicon) {
 			result += `<span class="material-symbols-outlined">${gicon}</span>`;

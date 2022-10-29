@@ -11,19 +11,19 @@
 			"screenshots": [
 				{
 					"title": "Редактор кода",
-					"src": "1.jpg"
+					"image": "1.jpg"
 				}, {
 					"title": "Синхронизация с Git",
-					"src": "2.jpg"
+					"image": "2.jpg"
 				}, {
 					"title": "Широкая кастомизация",
-					"src": "3.jpg"
+					"image": "3.jpg"
 				}, {
 					"title": "Поддержка векторных изобркжений",
-					"src": "4.jpg"
+					"image": "4.jpg"
 				}, {
 					"title": "Обзор проектов",
-					"src": "5.jpg"
+					"image": "5.jpg"
 				}
 			]
 		},
