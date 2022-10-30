@@ -7,11 +7,11 @@ import { initHeader } from 'Components/header';
 initHeader(window, false);
 setTimeout(() => initReveal(window, 100), 250);
 
-const link = window.location.href;
-alert(link);
+const link: string = window.location.href;
+//const link: string  = prompt("Hi!");
 if(link.includes('/project/')) {
-	const name = link.substring(link.lastIndexOf('project/'), link.length);
-	alert(name);
+	const path = '/project/';
+	const name = link.substr(link.lastIndexOf(path) + path.length, link.length);
 	location.href = `https://mrboomdev.ru/project?name=${name}`;
 }
 
