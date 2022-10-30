@@ -7,17 +7,22 @@ const isProd = process.argv[process.argv.indexOf('--mode') + 1] == "production";
 
 const pages = [ "index", "project", "terms", "404" ];
 
+const htmlPluginTemplate = {
+	title: "MrBoomDev - Фронтенд Разработчик",
+	description: "Пишу веб-приложения и просто обожаю красивые веб интерфейсы!",
+	template: path.resolve(__dirname, "../../src/pages/core/template.html"),
+	isProd: isProd
+}
+
+if(isProd) HtmlWebpackPlugin.publicPath = 'https://mrboomdev.ru';
+
 const htmlEntry = pages.map(name => {
-	return new HtmlWebpackPlugin({
+	return new HtmlWebpackPlugin({...htmlPluginTemplate, ...{
 		filename: `${name}.html`,
-		template: path.resolve(__dirname, "../../src/pages/core/template.html"),
 		chunks: [name],
 		body: fs.readFileSync(path.resolve(__dirname, `../../src/pages/${name}/${name}.html`), "utf8"),
-		isProd: isProd,
 		path: (name == 'index' ? '' : name),
-		title: "MrBoomDev - Фронтенд Разработчик",
-		description: "Пишу веб-приложения и просто обожаю красивые веб интерфейсы!"
-	});
+	}});
 });
 
 function generateEntry(entry, result = {}) {
