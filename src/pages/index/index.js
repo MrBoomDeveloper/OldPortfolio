@@ -1,7 +1,8 @@
 require("../core");
 import { el, initReveal, revealNow } from "boomutil";
 import { initHeader } from "Components/header";
-import { loadProjects } from "Components/projectsGrid";
+import { fillSkills } from './logic/skills';
+import { fillCategories } from './logic/projects';
 import "./style";
 
 initHeader(window, true);
@@ -12,29 +13,9 @@ for(const item of ["#hero p", "#hero .button-holder"]) {
 	revealNow(el(item));
 }
 
-import("Data/skills").then(data => {
-	el("#skills .grid").innerHTML = (list => {
-		return list.reduce((html, item) => {
-			return html + `<boom-item class="card reveal"
-				title="${item.title}"
-				icon="./img/skills/${item.icon || item.title.toLowerCase()}.svg">
-			</boom-item>`;
-		}, "");
-	})(data.all);
-});
+import("Data/skills").then(fillSkills);
+import("Data/projects").then(fillCategories);
 
-const filter = el("#filter");
-import("Data/projects").then(data => {
-	loadProjects(data);
-	el("#seeAllProjects").addEventListener("click", () => {
-		window.scrollTo(0, el("#projects").getBoundingClientRect().top + window.scrollY);
-		filter.select(4);
-	});
-});
-
-el("#contact boom-button").addEventListener("click", () => {
-	el("#contact form").requestSubmit();
-});
-
+el("#contact boom-button").onclick = () => el("#contact form").requestSubmit();
 
 

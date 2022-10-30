@@ -1,6 +1,6 @@
 {
 	"name": "portfolio",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"scripts": {
 		"analyze": "webpack --mode production --config config/build/webpack.analyze.js",
 		"local": "webpack serve --mode development --config config/build/webpack.dev.js --host 192.168.1.126",
@@ -14,6 +14,7 @@
 		"eslint": "^7.32.0",
 		"eslint-webpack-plugin": "^3.2.0",
 		"html-webpack-plugin": "^5.5.0",
+		"mini-css-extract-plugin": "^2.6.1",
 		"sass": "^1.55.0",
 		"sass-loader": "^13.0.2",
 		"style-loader": "^3.3.1",
@@ -25,6 +26,6 @@
 		"webpack-dev-server": "^4.11.1"
 	},
 	"dependencies": {
-		"boomutil": "^1.1.0"
+		"boomutil": "^1.1.1"
 	}
 }

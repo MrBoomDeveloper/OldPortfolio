@@ -10,7 +10,7 @@ site-header {
 		backdrop-filter: blur(1px);
 		transition: 1s, background-color .2s;
 		
-		&:is(.shadow, .activeByBurger) {
+		&:is(.shadow, .active) {
 			background-color: rgb(17 7 31 / .9);
 		}
 		

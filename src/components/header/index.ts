@@ -5,16 +5,11 @@ const { homeUrl, links } = require("Data/header");
 let navActive: boolean = false;
 let headerLis: HTMLElement[] = [];
 
-interface linkItem {
-	url: string
-}
-
-export function initHeader(parent: HTMLElement, enableHighlight: boolean) {
+export function initHeader(parent: Window, enableHighlight: boolean) {
 	if(enableHighlight) {
-		initHighlight(parent, links.map((item: linkItem) => {
-			const hash: string = (item.url).substring(2, (item.url).length);
-			headerLis = els("site-header nav li");
-			headerLis[0].classList.add("active");
+		initHighlight(parent, links.map(({ url }: any) => {
+			const hash: string = url.substring(2, url.length);
+			els("site-header nav li")[0].classList.add("active");
 			return hash;
 		}));
 	}
@@ -23,39 +18,30 @@ export function initHeader(parent: HTMLElement, enableHighlight: boolean) {
 	initBurger();
 }
 
-function watchScroll(parent: HTMLElement | Window) {
-	parent.addEventListener("scroll", () => {
+function watchScroll(parent: Window) {
+	parent.onscroll = () => {
 		const headerBack = el("site-header header");
-		
-		if(parent instanceof Window) {
-			if (parent.scrollY > 10) {
-				headerBack.classList.add("shadow");
-			} else {
-				if(!navActive) {
-					headerBack.classList.remove("shadow");
-				}
-			}
+		setClass(headerBack, "shadow", parent.scrollY > 10);
+	}
+	
+	function setClass(element: Element, className: string, hasAdded: boolean) {
+		if(hasAdded) {
+			element.classList.add(className);
 		} else {
-			if (parent.scrollTop > 10) {
-				headerBack.classList.add("shadow");
-			} else {
-				if(!navActive) {
-					headerBack.classList.remove("shadow");
-				}
-			}
+			element.classList.remove(className);
 		}
-	});
+	}
 }
 
 function initHighlight(parent: HTMLElement | Window, sections: string[]) {
 	const views = sections.map(hash => el(hash));
-	parent.addEventListener("scroll", () => {
+	parent.onscroll = () => {
 		views.forEach((view, id: number) => {
 			if(view.getBoundingClientRect().top < 150) {
 				setHighlight(id);
 			}
 		});
-	});
+	}
 }
 
 function setHighlight(id: number) {
@@ -66,14 +52,11 @@ function setHighlight(id: number) {
 }
 
 function initBurger() {
-	const burger: HTMLElement = el("site-header #headerBurger");
-	const nav: HTMLElement = el("site-header nav");
-	const headerBack: HTMLElement = el("site-header header");
-	burger.addEventListener("click", () => {
-		burger.classList.toggle("active");
-		nav.classList.toggle("active");
-		headerBack.classList.toggle("activeByBurger");
-	});
+	el("#headerBurger").onclick = () => {
+		for(const element of ["#headerBurger", "nav", "header"]) {
+			el(`site-header ${element}`).classList.toggle("active");
+		}
+	}
 }
 
 export default class Header extends HTMLElement {
@@ -87,6 +70,7 @@ export default class Header extends HTMLElement {
 					</div>
 				</div>
 			</header>
+			
 			<nav class="reveal">
 				<ul class="content">${arrayToUl(links, true)}</ul>
 			</nav>
@@ -94,8 +78,6 @@ export default class Header extends HTMLElement {
 	}
 }
 
-(() => {
-	customElements.define("site-header", Header);
-})();
+customElements.define("site-header", Header);
 
 

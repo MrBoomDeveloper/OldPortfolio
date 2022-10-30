@@ -3,6 +3,7 @@ import "Components/header";
 import "Components/footer";
 
 el("html").classList.remove("loading");
+el("#javascriptErrorMessage").remove();
 
 setTimeout(() => {
 	for(const view of [

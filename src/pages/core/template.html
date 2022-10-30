@@ -33,9 +33,15 @@
 	<script src="https://cdn.jsdelivr.net/npm/eruda"></script><script>eruda.init();</script>
 	<% } %>
 	
-	<style>html.loading{background:#11071F}html.loading body{opacity:0}</style>
+	<style>body{margin:0;padding:0}html.loading{background:#11071F}html.loading body{margin:0}html.loading #app{opacity:0}.header-message{display:block;padding:1rem;color:white;text-shadow:0 0 1px black;background:#da33ff;font-family:sans-serif}</style>
 </head>
 <body>
+	<noscript>
+		<p class="header-message">Похоже, что ваш браузер блокирует логику данного сайта. Попробуйте включить JavaScript в настройках безопасности.</p>
+	</noscript>
+
+	<p class="header-message" id="javascriptErrorMessage">Нам не удалось загрузить логику сайта. Пожалуйста, попробуйте еще раз через пару минут.<style>#app{display:none}</style></p>
+	
 	<div id="app" class="reveal">
 		<%= htmlWebpackPlugin.options.body %>
 	</div>

@@ -51,7 +51,7 @@ section {
 			grid-row: 2 / 2;
 		}
 		
-		&:not(:has(.section.screenshots)) {
+		&:not(:has(section.screenshots)) {
 			section.description {
 				grid-row: 1 / 1;
 			}

@@ -1,4 +1,5 @@
 import { el, els, createElement } from "boomutil";
+import { fillElementsSameSimple } from 'Features/fillElements';
 import { fillHero, fillActions } from "Pages/project/logic/hero";
 import { fillScreenshots, Screenshot } from "Pages/project/logic/screenshots";
 import { fillDetails } from "Pages/project/logic/details";
@@ -30,15 +31,12 @@ interface Metadata {
 }
 
 export function fillMetadata({ title, description }: Metadata) {
-	el('title').textContent = title;
+	fillElementsSameSimple('title, meta[name="og:title"]', title);
 	
-	for(const element of els(
-		`meta[name=description],
+	fillElementsSameSimple((`meta[name=description],
 		meta[property="og:description"],
 		section.description p`
-	)) {
-		element.innerText = description;
-	}
+	), description);
 	
 	if(!description) el('section.description').remove();
 }

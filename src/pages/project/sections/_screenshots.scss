@@ -41,13 +41,15 @@ section.screenshots h3 {
 		li {
 			width: 8rem;
 			scale: .95;
+			transition: .2s;
 			
 			&.active {
 				outline: 1px solid white;
+				scale: .98;
 			}
 			
 			&:not(.active) {
-				filter: brightness(80%);
+				filter: brightness(75%);
 			}
 			
 			span {
