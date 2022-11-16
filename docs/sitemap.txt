@@ -1,9 +1,3 @@
 https://mrboomdev.ru
-https://mrboomdev.ru/project?name=studio
-https://mrboomdev.ru/project?name=fnafm
-https://mrboomdev.ru/project?name=kitchen
-https://mrboomdev.ru/project?name=fnaf7
-https://mrboomdev.ru/project?name=site2
-https://mrboomdev.ru/project?name=site1
-https://mrboomdev.ru/terms?page=privacy
-https://mrboomdev.ru/terms?page=agreement
+http://mrboomdev.ru/project
+https://mrboomdev.ru/terms
