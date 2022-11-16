@@ -44,12 +44,17 @@ site-header {
 					
 			&:hover {
 				color: white;
+				text-decoration: underline;
+				text-decoration-color: rgb(250 250 250 / .8);
+				text-decoration-thickness: 1.2px;
+				text-underline-offset: .5em;
 			}
 		}
 	}
 	
 	h2 {
-		font-family: "Raleway", sans-serif;
+		font-family: Roboto, sans-serif;
+		font-weight: 700;
 		font-size: 1.7em;
 		color: $primary;
 		display: inline;

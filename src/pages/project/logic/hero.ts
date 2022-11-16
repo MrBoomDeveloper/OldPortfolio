@@ -29,13 +29,13 @@ export function fillHero(data: Hero, parent: HTMLElement) {
 }
 
 interface Actions {
-	browser_download_url: string,
+	release: Release,
 	html_url: string
 }
 
 export function fillActions(actions: Actions) {
 	el("main .actions").innerHTML = `
-		<a href="${actions.browser_download_url}">
+		<a href="${actions.release.browser_download_url}">
 			<boom-button class="fill">Скачать</boom-button>
 		</a>
 		<a href="${actions.html_url}">

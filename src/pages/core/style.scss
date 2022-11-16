@@ -1,7 +1,8 @@
 @import "~boomutil/index",
 	"~Components/header/style", "~Components/footer/style";
+	
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@649&family=Roboto:wght@400;500;700&display=swap');
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined";
-@import "https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap";
 
 .social img {
 	width: 2.6rem;
@@ -40,6 +41,16 @@
 		transform: translateY(.4ch);
 		background-color: $primary;
 	}
+}
+
+.title-cool {
+	font-size: 1.7em;
+	margin-bottom: .3em;
+}
+
+.subtitle-cool {
+	font-weight: 500;
+	color: $title;
 }
 
 @media (max-width: 750px) {

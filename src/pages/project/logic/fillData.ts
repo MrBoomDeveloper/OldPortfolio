@@ -18,9 +18,11 @@ export function fillData(data: any, projectName: string) {
 	fillScreenshots(data.screenshots, projectName);
 	fillDetails(data);
 	fillMetadata(data);
-	
 	createElement("div", {}, {
-		html: `<h3>${data.name}</h3><p>${data.body}</p>`,
+		html: `
+			<h3>${data.name}</h3>
+			<p>${data.body.replaceAll('\n', '<br>')}</p>
+		`,
 		parent: el("section.update")
 	});
 }

@@ -6,6 +6,11 @@ import { fillDataSimple } from "./logic/fillDataSimple";
 const github = require("Data/github");
 import "./style";
 
+window.addEventListener('scroll', () => {
+	const element = el('#app > .info');
+	element.style.marginTop = `-${window.scrollY / 3}px`;
+});
+
 async function getPackageData(repo) {
 	try {
 		const response = await fetch(`${github.api + repo}/releases/latest`, {
@@ -38,7 +43,7 @@ el(".expand").onclick = function() {
 	const projectDetails = projectsArray.all[projectName];
 	const packageDetails = await getPackageData(projectDetails.repo);
 	
-	initHeader(window, false);
+	initHeader(false);
 	setTimeout(() => initReveal(window, 125), 250);
 	
 	if(!packageDetails.assets) {

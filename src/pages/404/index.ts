@@ -1,10 +1,9 @@
 import '../core';
-import './style';
-
 import { el, initReveal } from 'boomutil';
 import { initHeader } from 'Components/header';
+import './style';
 
-initHeader(window, false);
+initHeader(false);
 setTimeout(() => initReveal(window, 100), 250);
 
 const link: string = window.location.href;

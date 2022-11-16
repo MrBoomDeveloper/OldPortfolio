@@ -3,26 +3,26 @@ import { arrayToUl } from "Features/generateUl";
 const { homeUrl, links } = require("Data/header");
 
 let navActive: boolean = false;
-let headerLis: HTMLElement[] = [];
+let headerLis: HTMLElement[];
 
-export function initHeader(parent: Window, enableHighlight: boolean) {
+export function initHeader(enableHighlight: boolean) {
 	if(enableHighlight) {
-		initHighlight(parent, links.map(({ url }: any) => {
+		initHighlight(links.map(({ url }: any) => {
 			const hash: string = url.substring(2, url.length);
 			els("site-header nav li")[0].classList.add("active");
 			return hash;
 		}));
 	}
 	
-	watchScroll(parent);
+	watchScroll();
 	initBurger();
 }
 
-function watchScroll(parent: Window) {
-	parent.onscroll = () => {
+function watchScroll() {
+	window.addEventListener('scroll', () => {
 		const headerBack = el("site-header header");
-		setClass(headerBack, "shadow", parent.scrollY > 10);
-	}
+		setClass(headerBack, "shadow", window.scrollY > 10);
+	});
 	
 	function setClass(element: Element, className: string, hasAdded: boolean) {
 		if(hasAdded) {
@@ -33,18 +33,19 @@ function watchScroll(parent: Window) {
 	}
 }
 
-function initHighlight(parent: HTMLElement | Window, sections: string[]) {
+function initHighlight(sections: string[]) {
 	const views = sections.map(hash => el(hash));
-	parent.onscroll = () => {
+	window.addEventListener('scroll', () => {
 		views.forEach((view, id: number) => {
 			if(view.getBoundingClientRect().top < 150) {
 				setHighlight(id);
 			}
 		});
-	}
+	});
 }
 
 function setHighlight(id: number) {
+	headerLis = els('site-header li');
 	for(const view of headerLis) {
 		view.classList.remove("active");
 	}

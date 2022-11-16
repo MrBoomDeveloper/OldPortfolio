@@ -28,27 +28,37 @@ $heroHeight: 100vh;
 			color: $primary;
 			margin-bottom: .1em;
 			font-size: 1.05em;
+			font-family: "Roboto", sans-serif;
+			font-weight: 500;
 		}
 		
 		h1 {
 			font-size: 2.5em;
-			margin-top: .2em;
-			font-family: "Raleway", sans-serif;
+			margin-top: .25em;
+			font-family: "Roboto", sans-serif;
+			font-weight: 700;
 			
 			&.revealed { transition-delay: .2s }
 		}
 		
 		p {
-			margin-block: .7em 1.4em;
+			margin-block: .6em 1.4em;
 			max-width: 25em;
 			font-size: 1.05em;
 			line-height: 1.6;
+			font-family: "Roboto", sans-serif;
+			font-weight: 400;
 			
 			&.revealed { transition-delay: .4s }
 		}
 		
 		.button-holder {
 			&.revealed { transition-delay: .6s }
+			
+			boom-button {
+				font-family: Roboto, sans-serif;
+				font-weight: 500;
+			}
 		}
 	}
 	.image {

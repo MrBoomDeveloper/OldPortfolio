@@ -4,3 +4,44 @@
 }
 
 
+//NEW SKILLS SECTION!
+
+#skills_new.block {
+	margin-bottom: 4rem;
+	
+	padding-block: 3rem .1rem;
+	background-color: rgb(0 0 0 / .1);
+	
+	.subtitle {
+		margin-block: .2em 1.4em;
+	}
+	
+	.skills-content {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 2rem;
+		
+		> h6 {
+			padding-top: .6em;
+			font-size: 1em;
+			font-weight: 550;
+		}
+		
+		.skills-row {
+			display: flex;
+			gap: .4rem;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	#skills_new.block {
+		.skills-content {
+			gap: 1rem;
+			grid-template-columns: auto;
+		}
+	}
+}
+
+

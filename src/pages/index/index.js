@@ -5,7 +5,7 @@ import { fillSkills } from './logic/skills';
 import { fillCategories } from './logic/projects';
 import "./style";
 
-initHeader(window, true);
+initHeader(true);
 setTimeout(() => initReveal(window, 100), 250);
 
 //Fixes hero section from being not fully revealed

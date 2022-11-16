@@ -46,20 +46,6 @@ function fillProjects(obj: any) {
 			return { banner, ...other };
 		}
 	}
-	
-	/*const json: any = obj;
-	el("#projects .grid").innerHTML = ((list: any) => {
-		return list.reduce((html: string, item: any) => {
-			return html + `<a href="${item.link}" class="reveal from-right">
-				<boom-article title="${item.title}" 
-					class="product" tags="${item.tags}"
-					banner="./img/large_art/${item.banner}.jpg"
-					highlight="${item.highlight}" 
-					description="${item.description}">
-				</boom-article>
-			</a>`;
-		}, "");
-	})(json);*/
 }
 
 
