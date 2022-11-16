@@ -57,6 +57,10 @@ section {
 		section.description {
 			grid-column: 1 / 1;
 			grid-row: 2 / 2;
+			
+			p {
+				opacity: .9;
+			}
 		}
 		
 		&:not(:has(section.screenshots)) {

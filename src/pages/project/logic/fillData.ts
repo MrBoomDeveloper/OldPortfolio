@@ -13,6 +13,8 @@ export interface Release {
 }
 
 export function fillData(data: any, projectName: string) {
+	console.log(data);
+	
 	fillHero(data, el("main"));
 	fillActions(data);
 	fillScreenshots(data.screenshots, projectName);

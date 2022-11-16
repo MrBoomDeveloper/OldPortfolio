@@ -16,7 +16,7 @@ site-footer {
 	text-align: center;
 	
 	footer {
-		padding-block: .4rem 1rem;
+		padding-block: .5rem .8rem;
 	}
 	
 	.content {
@@ -48,7 +48,7 @@ site-footer {
 	}
 	
 	h3 {
-		margin: .3em 0;
+		margin-block: .4em .1em;
 		font-weight: 400;
 		color: hsl(280, 30%, 95%);
 		
@@ -63,6 +63,10 @@ site-footer {
 		justify-content: center;
 		gap: 1.4rem;
 		
+		&.social {
+			margin-top: -.1rem;
+		}
+		
 		li {
 			flex-shrink: 0;
 		}
@@ -70,6 +74,7 @@ site-footer {
 	
 	.urls {
 		margin-bottom: .4rem;
+		gap: 1.4rem 2rem;
 	}
 }
 
@@ -85,6 +90,10 @@ site-footer {
 		
 		.urls {
 			width: 80%;
+		}
+		
+		.divider {
+			margin-block: .8rem 1rem;
 		}
 	}
 }

@@ -78,7 +78,7 @@ $heroHeight: 100vh;
 
 @media (min-width: 750px) {
 	#hero {
-		$heroHeight: min(100vh, 30rem);
+		$heroHeight: min(100vh, 35vw);
 		height: $heroHeight;
 		
 		.info {

@@ -1,10 +1,10 @@
 import { el, createElement } from 'boomutil';
-import * from 'Model/policy';
+//import * from 'Model/policy';
 
 createElement('ul', {
 	class: 'policyHolder'
 }, {
-	html: 
+	//html: 
 	parent: el('#policyHolder')
 });
 

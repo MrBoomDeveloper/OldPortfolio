@@ -9,7 +9,6 @@
 		"prod": "webpack --mode production --config config/build/webpack.prod.js",
 		"fastcommit": "npm run prod && git add . && git commit -m 'Времени нет, вот быстрый комит' && git push origin"
 	},
-	
 	"devDependencies": {
 		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.7.1",
@@ -24,11 +23,10 @@
 		"typescript": "^4.8.4",
 		"webpack": "^5.74.0",
 		"webpack-bundle-analyzer": "^4.7.0",
-		"webpack-cli": "^4.2.0",
+		"webpack-cli": "^4.10.0",
 		"webpack-dev-server": "^4.11.1"
 	},
-	
 	"dependencies": {
-		"boomutil": "^1.1.1"
+		"boomutil": "^1.1.2"
 	}
 }

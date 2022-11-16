@@ -16,6 +16,44 @@
 
 /**********FUTURE LIB UPDATES***********/
 
+//NEW SURFACE COLOR
+
+boom-item {
+	&.tag {
+		background-color: hsl(280 50% 50% / .1);
+	}
+	
+	&.card {
+		background-color: hsl(280 50% 40% / .1);
+	}
+}
+
+boom-button {
+	&.large {
+		background-color: hsl(280 50% 30% / .1);
+		border-radius: 15px;
+		padding: 1.6rem;
+		
+		p {
+			opacity: .95;
+		}
+	}
+}
+
+boom-article {
+	background-color: hsl(280 50% 30% / .1);
+	
+	.details {
+		.highlight {
+			
+		}
+		
+		h3 {
+			font-size: 1.2em;
+		}
+	}
+}
+
 //CUSTOM INPUT ELEMENT
 
 /*%placeholder {
