@@ -4,9 +4,6 @@
 			"title": "React",
 			"icon": "react"
 		}, {
-			"title": "Webpack",
-			"icon": "webpack"
-		}, {
 			"title": "TypeScript", 
 			"icon": "ts"
 		}, {
@@ -18,6 +15,12 @@
 		}, {
 			"title": "Android",
 			"icon": "android"
+		}, {
+			"title": "Python",
+			"icon": "python"
+		}, {
+			"title": "Webpack",
+			"icon": "webpack"
 		}, {
 			"title": "NodeJS", 
 			"icon": "node"
@@ -39,5 +42,3 @@
 		}
 	]
 }
-
-

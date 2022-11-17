@@ -8,11 +8,7 @@ module.exports = merge(common, {
 	devtool: "inline-source-map",
 	devServer: {
 		static: "./docs",
-		magicHtml: true,
-		
-		client: {
-			progress: true
-		}
+		magicHtml: true
 	},
 	
 	plugins: [
