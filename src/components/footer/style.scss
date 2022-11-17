@@ -1,19 +1,8 @@
-#footer {
-	position: relative;
-	
-	&::before {
-		@include pseudo(rgb(0 0 0 / .2));
-		inset: 0;
-		position: absolute;
-		width: 100%;
-		z-index: -1;
-		height: 100%;
-	}
-}
-
 site-footer {
 	font-size: .9em;
 	text-align: center;
+	display: block;
+	background-color: rgb(0 0 0 / .2);
 	
 	footer {
 		padding-block: .5rem .8rem;
@@ -63,6 +52,11 @@ site-footer {
 		justify-content: center;
 		gap: 1.4rem;
 		
+		&.urls {
+			margin-bottom: .4rem;
+			gap: 1.4rem 2rem;
+		}
+		
 		&.social {
 			margin-top: -.1rem;
 		}
@@ -70,11 +64,6 @@ site-footer {
 		li {
 			flex-shrink: 0;
 		}
-	}
-	
-	.urls {
-		margin-bottom: .4rem;
-		gap: 1.4rem 2rem;
 	}
 }
 

@@ -19,7 +19,6 @@ $heroHeight: 100vh;
 #hero {
 	display: flex;
 	align-items: center;
-	height: 100vh;
 	
 	.info {
 		flex-grow: 1;
@@ -80,6 +79,7 @@ $heroHeight: 100vh;
 	#hero {
 		$heroHeight: min(100vh, 35vw);
 		height: $heroHeight;
+		min-height: 30rem;
 		
 		.info {
 			flex-grow: 0;
@@ -95,6 +95,7 @@ $heroHeight: 100vh;
 			img {
 				object-position: right;
 				height: $heroHeight;
+				min-height: 30rem;
 			}
 		}
 	}

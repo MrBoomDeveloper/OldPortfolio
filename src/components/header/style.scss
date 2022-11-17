@@ -147,8 +147,7 @@ site-header {
 					text-align: right;
 					
 					&:not(:last-child)::after {
-						@include pseudo($title);
-						opacity: .2;
+						@include pseudo(hsl(280 85% 85% / .2));
 						margin-top: 2rem;
 						width: 100%;
 						height: 1px;

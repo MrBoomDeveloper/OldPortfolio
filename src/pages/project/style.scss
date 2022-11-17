@@ -21,11 +21,15 @@ section {
 }
 
 #app > .info {
-	padding-top: 2rem;
+	padding-top: 10rem;
 	background-image: linear-gradient(
 	    $none,
 	    $background 4rem
 	);
+	
+	> .content {
+		margin-top: -8rem !important;
+	}
 }
 
 #app > .info > .content {
@@ -34,6 +38,12 @@ section {
 	
 	section.screenshots {
 		overflow: hidden;
+	}
+	
+	section.description {
+		#project-description + h3 {
+			margin-top: 2rem;
+		}
 	}
 	
 	aside {

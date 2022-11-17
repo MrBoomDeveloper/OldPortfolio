@@ -93,6 +93,7 @@ main {
 @media (min-width: 750px) {
 	main {
 		height: min(100vh, 35vw);
+		min-height: 30rem;
 		
 		.content {
 			align-items: center;
@@ -109,6 +110,7 @@ main {
 				position: relative;
 				padding-right: 5rem;
 				font-size: 1.05em;
+				z-index: -1;
 				
 				.highlight {
 					font-size: 1.2em;
@@ -130,6 +132,7 @@ main {
 					position: absolute;
 					width: 100vw;
 					height: 100%;
+					z-index: -1;
 				}
 			}
 

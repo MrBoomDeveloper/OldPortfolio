@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"outDir": "./docs",
 		"noImplicitAny": true,
-		"module": "es6",
+		"module": "esnext",
 		"lib": [ "es2021", "dom" ],
 		"target": "es6",
 		"allowJs": true,
@@ -15,9 +15,14 @@
 			"Components/*": ["components/*"],
 			"Features/*": ["features/*"],
 			"Data/*": ["data/*"],
-			"Pages/*": ["pages/*"]
+			"Pages/*": ["pages/*"],
+			"Model/*": ["model/*"],
+			"Controller/*": ["controller/*"]
 		}
 	},
+	
+	"resolveJsonModule": true,
+	"esModuleInterop": true,
 	
 	"exclude": [
 		"node_modules"

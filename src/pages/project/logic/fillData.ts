@@ -39,7 +39,7 @@ export function fillMetadata({ title, description }: Metadata) {
 	
 	fillElementsSameSimple((`meta[name=description],
 		meta[property="og:description"],
-		section.description p`
+		section.description #project-description`
 	), description);
 	
 	if(!description) el('section.description').remove();

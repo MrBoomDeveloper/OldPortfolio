@@ -11,14 +11,14 @@ window.addEventListener('scroll', () => {
 	element.style.marginTop = `-${window.scrollY / 3}px`;
 });
 
-async function getPackageData(repo) {
+async function getPackageData(repo: any) {
 	try {
 		const response = await fetch(`${github.api + repo}/releases/latest`, {
 			headers: github.headers
 		});
 		const json = await response.json();
 		return json;
-	} catch(e) {
+	} catch(e: any) {
 		new BoomDialog({
 			title: "Произошла ошибка",
 			description: `Во время загрузки страницы призошла ошибка. 
@@ -38,10 +38,10 @@ el(".expand").onclick = function() {
 };
 
 (async () => {
-	const projectsArray = await import("Data/projects.json");
-	const projectName = getParam("name") ?? "studio";
-	const projectDetails = projectsArray.all[projectName];
-	const packageDetails = await getPackageData(projectDetails.repo);
+	const projectsArray: any = await import("Data/projects.json");
+	const projectName: any = getParam("name") ?? "studio";
+	const projectDetails: any = projectsArray.all[projectName];
+	const packageDetails: any = await getPackageData(projectDetails.repo);
 	
 	initHeader(false);
 	setTimeout(() => initReveal(window, 125), 250);
@@ -51,10 +51,10 @@ el(".expand").onclick = function() {
 		return;
 	}
 	
-	const release = packageDetails.assets[0];
+	const release: any = packageDetails.assets[0];
 	delete packageDetails.assets;
 	
-	const mergedData = { ...projectDetails, ...packageDetails, release };
+	const mergedData: any = { ...projectDetails, ...packageDetails, release };
 	fillData(mergedData, projectName);
 })();
 

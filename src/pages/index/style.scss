@@ -40,7 +40,13 @@ boom-button {
 	}
 }
 
+boom-faq {
+	outline: solid hsl(280 90% 90% / .2) 1px;
+	background-color: hsl(280 50% 30% / .1);
+}
+
 boom-article {
+	outline: solid hsl(280 85% 85% / .2) 1px;
 	background-color: hsl(280 50% 30% / .1);
 	
 	.details {
