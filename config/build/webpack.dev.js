@@ -16,7 +16,7 @@ module.exports = merge(common, {
 	},
 	
 	plugins: [
-		new ESLintPlugin(),
+		//new ESLintPlugin(),
 	],
 	
 	module: {
