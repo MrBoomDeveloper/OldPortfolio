@@ -4,6 +4,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = merge(common, {
 	mode: "production",
+	output: {
+		publicPath: "https://mrboomdev.ru/"
+	},
 	
 	plugins: [
 		new MiniCssExtractPlugin({

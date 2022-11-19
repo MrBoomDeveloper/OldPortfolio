@@ -6,16 +6,14 @@ import { fillCategories } from './logic/projects';
 import "./style";
 
 initHeader(true);
-setTimeout(() => initReveal(window, 100), 250);
+initReveal(window, 100);
 
 //Fixes hero section from being not fully revealed
 for(const item of ["#hero p", "#hero .button-holder"]) {
 	revealNow(el(item));
 }
 
-import("Data/skills").then(fillSkills);
-import("Data/projects").then(fillCategories);
+import("Data/skills.json").then(fillSkills);
+import("Data/projects.json").then(fillCategories);
 
 el("#contact boom-button").onclick = () => el("#contact form").requestSubmit();
-
-

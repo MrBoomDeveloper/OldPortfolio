@@ -20,7 +20,12 @@
 
 boom-item {
 	&.tag {
+		outline: solid hsl(280 75% 85% / .1) 1px;
 		background-color: hsl(280 50% 50% / .1);
+		
+		&:has(img) {
+			padding-right: .4rem;	
+		}
 	}
 	
 	&.card {
@@ -41,13 +46,22 @@ boom-button {
 }
 
 boom-faq {
-	outline: solid hsl(280 90% 90% / .2) 1px;
+	outline: solid hsl(280 75% 85% / .2) 1px;
 	background-color: hsl(280 50% 30% / .1);
 }
 
 boom-article {
-	outline: solid hsl(280 85% 85% / .2) 1px;
+	outline: solid hsl(280 75% 85% / .2) 1px;
 	background-color: hsl(280 50% 30% / .1);
+	border-radius: 10px;
+	
+	&:active {
+		background-color: hsl(280 50% 30% / .15);
+	}
+	
+	.banner {
+		border-radius: 10px 10px 0 0;
+	}
 	
 	.details {
 		.highlight {
@@ -125,5 +139,3 @@ boom-input {
 		opacity: 0;
 	}
 }*/
-
-

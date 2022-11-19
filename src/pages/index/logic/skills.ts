@@ -6,9 +6,9 @@ interface Skill {
 }
 
 export function fillSkills(data: any) {
-	el("#skills .grid").innerHTML = (list => {
+	el(".skills-content").innerHTML = (list => {
 		return list.reduce((html: string, { title, icon }: Skill) => {
-			return html + `<boom-item class="card reveal"
+			return html + `<boom-item class="tag reveal from-right"
 				title="${title}" icon="./img/skills/${icon}.svg">
 			</boom-item>`;
 		}, "");
