@@ -5,6 +5,14 @@ section.skills-block {
 		text-align: center;
 	}
 	
+	.title-cool.revealed {
+		transition-delay: .7s;
+	}
+	
+	.subtitle-cool.revealed {
+		transition-delay: .9s;
+	}
+	
 	.skills-content {
 		margin-top: 1.8rem;
 		display: flex;

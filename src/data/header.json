@@ -4,19 +4,19 @@
 	"links": [
 		{ 
 			"title": "Главная", 
-			"url": "./#hero" 
+			"url": "https://mrboomdev.ru/#hero"
 		},
 		{ 
 			"title": "Мои проекты", 
-			"url": "./#projects" 
+			"url": "https://mrboomdev.ru/#projects" 
 		},
 		{ 
-			"title": "Обо мне", 
-			"url": "./#aboutme" 
+			"title": "Обо мне",
+			"url": "https://mrboomdev.ru/#aboutme"
 		},
 		{ 
 			"title": "Связаться", 
-			"url": "./#contact" 
+			"url": "https://mrboomdev.ru/#contact"
 		}
 	]
 }

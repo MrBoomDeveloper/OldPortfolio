@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@649&family=Roboto:wght@400;500;700&display=swap');
 @import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined";
 
+:focus {
+	outline: solid white 1px;
+}
+
 .social img {
 	width: 2.6rem;
 	height: 2.6rem;

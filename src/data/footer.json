@@ -3,17 +3,17 @@
 
 	"social": [
 		{ 
-			"image": "./img/social/vk.png", 
+			"image": "https://mrboomdev.ru/img/social/vk.png", 
 			"alt": "VKontakte",
 			"url": "https://vkontakte.mrboomdev.ru"
 		},
 		{ 
-			"image": "./img/social/youtube.png", 
+			"image": "https://mrboomdev.ru/img/social/youtube.png", 
 			"alt": "YouTube",
 			"url": "https://youtube.mrboomdev.ru"
 		},
 		{ 
-			"image": "./img/social/ds.png", 
+			"image": "https://mrboomdev.ru/img/social/ds.png", 
 			"alt": "Discord",
 			"url": "https://discord.mrboomdev.ru"
 		}

@@ -9,7 +9,7 @@ initHeader(true);
 initReveal(window, 100);
 
 //Fixes hero section from being not fully revealed
-for(const item of ["#hero p", "#hero .button-holder"]) {
+for(const item of ["#hero p", "#hero .button-holder", ".skills-block .title-cool", ".skills-block .subtitle-cool"]) {
 	revealNow(el(item));
 }
 

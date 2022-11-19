@@ -34,7 +34,9 @@ function watchScroll() {
 }
 
 function initHighlight(sections: string[]) {
-	const views = sections.map(hash => el(hash));
+	const views = sections.map(hash => {
+		return el(hash.substring(hash.indexOf(".ru/") + 4, hash.length));	
+	});
 	window.addEventListener('scroll', () => {
 		views.forEach((view, id: number) => {
 			if(view.getBoundingClientRect().top < 150) {

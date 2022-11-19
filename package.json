@@ -27,6 +27,6 @@
 		"webpack-dev-server": "^4.11.1"
 	},
 	"dependencies": {
-		"boomutil": "^1.1.2"
+		"boomutil": "^1.1.3"
 	}
 }
