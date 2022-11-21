@@ -87,15 +87,15 @@ $heroHeight: 100vh;
 		}
 		
 		.image {
-			padding: 5rem 0 0 5rem;
 			z-index: -1;
 			position: absolute;
 			top: 0;
 			right: 0;
 			
 			img {
+				padding: 5rem 0 0 5rem;
 				object-position: right;
-				height: calc($heroHeight - 5rem);
+				height: $heroHeight;
 				min-height: 30rem;
 			}
 		}
@@ -135,10 +135,10 @@ $heroHeight: 100vh;
 		
 		.image {
 			z-index: -1;
+			margin-top: -6rem;
 			
 			img {
 				width: 70vw;
-				margin-block: -10rem 5rem;
 				object-position: center;
 			}
 		}
