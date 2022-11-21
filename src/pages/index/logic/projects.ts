@@ -37,7 +37,10 @@ function fillProjects(obj: any) {
 		}
 		
 		);
-		createElement('boom-article', fixParams(item), {
+		createElement('boom-article', {
+			...fixParams(item),
+			loading: "lazy"
+		}, {
 			parent: linkHolder
 		});
 		
