@@ -31,11 +31,20 @@
 		"fnafm": {
 			"title": "FNaF Multiplayer", 
 			"highlight": "Игра Мультиплеер", 
-			"tags": "Java,JavaScript,NodeJS", 
+			"tags": "Java,JavaScript,Firebase", 
 			"banner": "fnafm",
 			"description": "Вступите в борьбу с одержимыми аниматронными машинами. Захватывающая мобильная игра в жанре экшн-платформер с любимыми персонажами. тупите в борьбу с одержимыми аниматронными машинами. Захватывающая мобильная игра в жанре экшн-платформер с любимыми персонажами. Вас ждет повышенная кастомизация своего персонажа, вдоль до коронных фраз! А огромное количество игровых режимов не заствит вас скучать.",
 			"link": "./project?name=fnafm",
-			"repo": "MrBoomDeveloper/platformer"
+			"repo": "MrBoomDeveloper/platformer",
+			"screenshots": [
+				{
+					"title": "Геймплей",
+					"image": "1.jpg"
+				}, {
+					"title": "Логотип",
+					"image": "2.jpg"
+				}
+			]
 		},
 		
 		"kitchen": {

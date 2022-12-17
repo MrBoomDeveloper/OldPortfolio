@@ -79,6 +79,7 @@ section {
 			}
 			
 			aside {
+				//background-color: red !important;
 				grid-column: 2 / 2;
 			}
 		}
@@ -94,6 +95,8 @@ section {
 @media (max-width: 750px) {
 	#app > .info {
 		margin-top: 3rem;
+		z-index: 10;
+		//position: absolute;
 	}
 	
 	section {
