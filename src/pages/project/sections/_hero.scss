@@ -64,6 +64,7 @@ main {
 			line-height: 1.6;
 			font-size: 1.05em;
 			text-shadow: 0 0 2px black;
+			display: none;
 		}
 	}
 
@@ -148,6 +149,7 @@ main {
 		padding-top: 7.5rem;
 		text-align: center;
 		backdrop-filter: blur(2px);
+		z-index: -1;
 		$mainWidth: min(25rem, 85%);
 		
 		.content {
