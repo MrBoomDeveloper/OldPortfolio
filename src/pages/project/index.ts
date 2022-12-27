@@ -6,11 +6,6 @@ import { fillDataSimple } from "./logic/fillDataSimple";
 const github = require("Data/github");
 import "./style";
 
-window.addEventListener('scroll', () => {
-	const element = el('#app > .info');
-	element.style.marginTop = `-${window.scrollY / 3}px`;
-});
-
 async function getPackageData(repo: any) {
 	try {
 		const response = await fetch(`${github.api + repo}/releases/latest`, {
@@ -32,11 +27,6 @@ async function getPackageData(repo: any) {
 	}
 }
 
-el(".expand").onclick = function() {
-	el("#disqus_thread").classList.add("expanded");
-	setTimeout(() => this.remove(), 250);
-};
-
 (async () => {
 	const projectsArray: any = await import("Data/projects.json");
 	const projectName: any = getParam("name") ?? "studio";
@@ -57,5 +47,3 @@ el(".expand").onclick = function() {
 	const mergedData: any = { ...projectDetails, ...packageDetails, release };
 	fillData(mergedData, projectName);
 })();
-
-

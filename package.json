@@ -4,10 +4,9 @@
 	"license": "ISC",
 	"scripts": {
 		"analyze": "webpack --mode production --config config/build/webpack.analyze.js",
-		"local": "webpack serve --mode development --config config/build/webpack.dev.js --host 192.168.1.126",
+		"wlan": "webpack serve --mode development --config config/build/webpack.dev.js --host 192.168.1.129",
 		"dev": "webpack serve --mode development --config config/build/webpack.dev.js",
-		"prod": "webpack --mode production --config config/build/webpack.prod.js",
-		"fastcommit": "npm run prod && git add . && git commit -m 'Времени нет, вот быстрый комит' && git push origin"
+		"prod": "webpack --mode production --config config/build/webpack.prod.js"
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "^11.0.0",

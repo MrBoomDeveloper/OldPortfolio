@@ -21,15 +21,11 @@ section {
 }
 
 #app > .info {
-	padding-top: 10rem;
+	padding-top: 4rem;
 	background-image: linear-gradient(
 	    $none,
 	    $background 4rem
 	);
-	
-	> .content {
-		margin-top: -8rem !important;
-	}
 }
 
 #app > .info > .content {
@@ -79,7 +75,6 @@ section {
 			}
 			
 			aside {
-				//background-color: red !important;
 				grid-column: 2 / 2;
 			}
 		}
@@ -88,15 +83,15 @@ section {
 			right: 0;
 			top: 0;
 			position: absolute;
+			grid-column: 2 / 2;
 		}
 	}
 }
 
 @media (max-width: 750px) {
 	#app > .info {
-		margin-top: 3rem;
+		padding-top: 1.2rem;
 		z-index: 10;
-		//position: absolute;
 	}
 	
 	section {
@@ -112,5 +107,3 @@ section {
 		}
 	}
 }
-
-

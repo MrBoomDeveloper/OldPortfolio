@@ -76,6 +76,10 @@ main {
 
 		boom-button {
 			width: 100%;
+			
+			&:nth-child(1) {
+				border-radius: 3px;
+			}
 
 			&:nth-child(2) {
 				$btn-color: #EEE;
@@ -111,7 +115,6 @@ main {
 				position: relative;
 				padding-right: 5rem;
 				font-size: 1.05em;
-				z-index: -1;
 				
 				.highlight {
 					font-size: 1.2em;
@@ -186,5 +189,3 @@ main {
 		}
 	}
 }
-
-

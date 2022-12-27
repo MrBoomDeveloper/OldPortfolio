@@ -5,37 +5,4 @@ section.comments {
 	.cat {
 		margin-bottom: 1.6rem;
 	}
-
-	.expand {
-		background-image: linear-gradient(
-			$none,
-			$background
-		);
-		margin-top: -4rem;
-		padding-top: 4rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		p {
-			color: $light;
-		}
-
-		&:hover {
-			text-decoration: underline;
-			text-decoration-color: $light;
-		}
-		
-	} > div {
-		max-height: 40rem;
-		overflow: hidden;
-		position: relative;
-		transition: 3s ease-in;
-
-		&.expanded {
-			max-height: 1000rem;
-		}
-	}
 }
-
-

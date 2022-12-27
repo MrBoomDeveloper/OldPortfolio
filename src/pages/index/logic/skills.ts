@@ -14,5 +14,3 @@ export function fillSkills(data: any) {
 		}, "");
 	})(data.all);
 }
-
-

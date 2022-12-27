@@ -40,14 +40,21 @@ site-header {
 		a {
 			font-family: "Roboto", sans-serif;
 			pointer-events: auto;
+			text-decoration: underline;
+			text-decoration-color: rgb(250 250 250 / 0);
 			transition: .3s;
 					
 			&:hover {
 				color: white;
-				text-decoration: underline;
 				text-decoration-color: rgb(250 250 250 / .8);
 				text-decoration-thickness: 1.2px;
 				text-underline-offset: .5em;
+			}
+			
+			&:not(:hover) {
+				text-decoration-thickness: 0px;
+				text-underline-offset: .3em;
+				text-decoration-color: rgb(250 250 250 / 0);
 			}
 		}
 	}
@@ -205,5 +212,3 @@ site-header {
 		}
 	}
 }
-
-
