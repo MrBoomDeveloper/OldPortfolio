@@ -51,6 +51,11 @@
 		
 		.content {
 			grid-template-columns: 1fr;
+			
+			.subtitle-cool {
+				font-size: 1.05em;
+				margin-block: .2em;
+			}
 		}
 		
 		lottie-player {

@@ -47,7 +47,7 @@ export function fillActions(actions: Actions) {
 function getStats({ size, download_count, updated_at }: Release) {
 	return arrayToUl([
 		{ gicon: "save", title: formatBytes(size) },
-		{ gicon: "download", title: download_count },
+		{ gicon: "download", title: download_count || "0" },
 		{ gicon: "schedule", title: formatDate(new Date(formatGithubDate(updated_at))) }
 	]);
 }

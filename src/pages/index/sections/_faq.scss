@@ -1,9 +1,15 @@
-.faq.block {
+.faq {
 	padding-block: 3rem;
 	
 	.text {
 		display: flex;
 		flex-direction: column;
 		gap: .5rem;
+	}
+}
+
+@media (max-width: 750px) {
+	.faq {
+		padding-bottom: 0;
 	}
 }

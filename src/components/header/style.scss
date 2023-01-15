@@ -119,8 +119,14 @@ site-header {
 
 @media (max-width: 750px) {
 	#app {
-		&:has(nav.active) > :not(site-header) {
-			opacity: .5;
+		&:has(nav.active) {
+			site-header .navigationOutside {
+				display: block;
+			}
+			
+			& > :not(site-header) {
+				opacity: .5;
+			}
 		}
 		
 		> :not(site-header) {
@@ -131,6 +137,16 @@ site-header {
 	site-header {
 		header a {
 			flex-grow: 1;
+		}
+		
+		.navigationOutside {
+			@include pseudo($none);
+			display: none;
+			position: fixed;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
 		}
 		
 		nav {
@@ -146,18 +162,21 @@ site-header {
 				padding-block: 1.5rem 3rem;
 				flex-direction: column;
 				align-items: flex-end;
-				gap: 1.2em;
 				font-size: 1.8em;
 				
 				li {
+					padding-block: 1em;
 					width: 100%;
 					text-align: right;
+					position: relative;
 					
-					&:not(:last-child)::after {
-						@include pseudo(hsl(280 85% 85% / .2));
-						margin-top: 2rem;
+					&::before {
+						@include pseudo(rgba(65, 65, 65, .1));
+						position: absolute;
 						width: 100%;
-						height: 1px;
+						height: 100%;
+						scale: 1.5 .95;
+						top: 0;
 					}
 				}
 				
@@ -210,5 +229,11 @@ site-header {
 				}
 			}
 		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	#headerBurger span {
+		background-color: rgb(200, 200, 200) !important;
 	}
 }

@@ -1,4 +1,4 @@
-import { el, els } from "boomutil";
+import { el, els, createElement } from "boomutil";
 import { arrayToUl } from "Features/generateUl";
 const { homeUrl, links } = require("Data/header");
 
@@ -79,7 +79,16 @@ export default class Header extends HTMLElement {
 	}
 	
 	initBurger() {
-		el("#headerBurger").onclick = () => {
+		const burger: HTMLElement = el("#headerBurger");
+		const outside: HTMLElement = createElement("div", {
+			class: "navigationOutside"
+		}, {
+			parent: this,
+			onclick() {
+				burger.click();
+			}
+		});
+		burger.onclick = () => {
 			for(const element of ["#headerBurger", "nav", "header"]) {
 				el(this, `${element}`).classList.toggle("active");
 			}
