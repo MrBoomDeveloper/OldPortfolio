@@ -1,15 +1,17 @@
 require("../core");
 import { el, initReveal, revealNow } from "boomutil";
-import { initHeader } from "Components/header";
+import Header from "Components/header";
 import { fillSkills } from './logic/skills';
 import { fillCategories } from './logic/projects';
 import "./style";
 
-initHeader(true);
+const header: Header = document.querySelector("site-header");
+header.toggleHighlights(true);
+
 initReveal(window, 100);
 
 //Fixes hero section from being not fully revealed
-for(const item of ["#hero p", "#hero .button-holder", ".skills-block .title-cool", ".skills-block .subtitle-cool"]) {
+for(const item of [".hero p", ".hero .heroButton", ".skills .title-cool", ".skills .subtitle-cool"]) {
 	revealNow(el(item));
 }
 

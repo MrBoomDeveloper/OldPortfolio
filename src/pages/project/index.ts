@@ -1,6 +1,5 @@
 import "../core";
 import { el, initReveal, getParam, BoomDialog } from "boomutil";
-import { initHeader } from "Components/header";
 import { fillData } from "./logic/fillData";
 import { fillDataSimple } from "./logic/fillDataSimple";
 const github = require("Data/github");
@@ -33,7 +32,6 @@ async function getPackageData(repo: any) {
 	const projectDetails: any = projectsArray.all[projectName];
 	const packageDetails: any = await getPackageData(projectDetails.repo);
 	
-	initHeader(false);
 	setTimeout(() => initReveal(window, 125), 250);
 	
 	if(!packageDetails.assets) {

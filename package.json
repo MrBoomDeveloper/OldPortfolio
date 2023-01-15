@@ -3,6 +3,7 @@
 	"version": "1.0.5",
 	"license": "ISC",
 	"scripts": {
+		"start": "npm run dev",
 		"analyze": "webpack --mode production --config config/build/webpack.analyze.js",
 		"wlan": "webpack serve --mode development --config config/build/webpack.dev.js --host 192.168.1.129",
 		"dev": "webpack serve --mode development --config config/build/webpack.dev.js",

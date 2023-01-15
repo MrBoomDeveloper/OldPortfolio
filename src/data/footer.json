@@ -5,28 +5,28 @@
 		{ 
 			"image": "https://mrboomdev.ru/img/social/vk.png", 
 			"alt": "VKontakte",
-			"url": "https://vkontakte.mrboomdev.ru"
+			"url": "https://redirect.mrboomdev.ru/vkontakte"
 		},
 		{ 
 			"image": "https://mrboomdev.ru/img/social/youtube.png", 
 			"alt": "YouTube",
-			"url": "https://youtube.mrboomdev.ru"
+			"url": "https://redirect.mrboomdev.ru/youtube"
 		},
 		{ 
 			"image": "https://mrboomdev.ru/img/social/ds.png", 
 			"alt": "Discord",
-			"url": "https://discord.mrboomdev.ru"
+			"url": "https://redirect.mrboomdev.ru/discord"
 		}
 	],
 	
 	"resources": [
 		{
 			"title": "Мой Плейлист",
-			"url": "https://music.mrboomdev.ru"
+			"url": "https://redirect.mrboomdev.ru/music"
 		},
 		{
 			"title": "Репозиторий Сайта",
-			"url": "https://repository.mrboomdev.ru"
+			"url": "https://redirect.mrboomdev.ru/repository"
 		},
 		{ 
 			"title": "Политика Конфиденциальности",

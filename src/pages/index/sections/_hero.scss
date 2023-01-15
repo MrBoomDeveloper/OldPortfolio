@@ -1,29 +1,26 @@
-$heroHeight: 100vh;
-
-.hero.content {
-	&::before {
-		content: "";
-		z-index: -1;
-		left: 0;
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: $heroHeight;
-		background-image: linear-gradient(
-	        #17092a 0%,
-	        $none 95%
-	    );
-	}
-}
-
-#hero {
+.hero {
 	display: flex;
+	justify-content: center;
 	align-items: center;
+	height: 100vh;
 	
-	.info {
-		flex-grow: 1;
+	.heroBanner {
+		position: absolute;
+		inset: 0;
+		opacity: .25;
 		
-		span {
+		img, video {
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+	}
+	
+	.heroInfo {
+		text-align: center;
+		max-width: 25rem;
+		
+		.heroHighlight {
 			color: $primary;
 			margin-bottom: .1em;
 			font-size: 1.05em;
@@ -31,121 +28,30 @@ $heroHeight: 100vh;
 			font-weight: 500;
 		}
 		
-		h1 {
+		.heroTitle {
 			font-size: 2.5em;
 			margin-top: .25em;
 			font-family: "Roboto", sans-serif;
 			font-weight: 700;
-			
 			&.revealed { transition-delay: .2s }
 		}
 		
-		p {
+		.heroDescription {
 			margin-block: .6em 1.4em;
 			max-width: 25em;
 			font-size: 1.05em;
 			line-height: 1.6;
 			font-family: "Roboto", sans-serif;
 			font-weight: 400;
-			
 			&.revealed { transition-delay: .4s }
 		}
 		
-		.button-holder {
+		.heroButton {
 			&.revealed { transition-delay: .6s }
-			
 			boom-button {
 				font-family: Roboto, sans-serif;
 				font-weight: 500;
 			}
-		}
-	}
-	.image {
-		width: 100%;
-		
-		.revealed {
-			transition-delay: .5s;
-		}
-		
-		img {
-			object-fit: contain;
-			width: 100%;
-			height: 100%;
-		}
-	}
-}
-
-@media (min-width: 750px) {
-	#hero {
-		$heroHeight: min(100vh, 35vw);
-		height: $heroHeight;
-		min-height: 30rem;
-		
-		.info {
-			flex-grow: 0;
-			max-width: 24rem;
-		}
-		
-		.image {
-			z-index: -1;
-			position: absolute;
-			top: 0;
-			right: 0;
-			
-			img {
-				padding: 5rem 0 0 5rem;
-				object-position: right;
-				height: $heroHeight;
-				min-height: 30rem;
-			}
-		}
-	}
-}
-
-@media (max-width: 750px) {
-	#hero {
-		flex-direction: column;
-		height: auto;
-		
-		.info {
-			text-align: center;
-			width: 90%;
-			height: max(65vh, 35rem);
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			
-			span {
-				font-size: 1.15em;
-			}
-			
-			h1 {
-				font-size: 3.2em;
-			}
-			
-			p {
-				font-size: 1.2em;
-				margin-inline: auto;
-				padding-inline: 1.2em;
-			}
-			
-			boom-button {
-				font-size: 1.1em;
-			}
-		}
-		
-		.image {
-			z-index: -1;
-			margin-top: -6rem;
-			
-			img {
-				width: 70vw;
-				object-position: center;
-			}
-		}
-		
-		p {
-			width: 92%;
 		}
 	}
 }
