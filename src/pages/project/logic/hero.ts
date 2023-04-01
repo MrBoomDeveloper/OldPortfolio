@@ -51,5 +51,3 @@ function getStats({ size, download_count, updated_at }: Release) {
 		{ gicon: "schedule", title: formatDate(new Date(formatGithubDate(updated_at))) }
 	]);
 }
-
-

@@ -1,17 +1,19 @@
-$heroHeight: min(90vh, 50rem);
+:root {
+	--heroHeight: min(90vh, 50rem);
+}
 
 .hero {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: $heroHeight;
+	height: var(--heroHeight);
 	
 	.heroEffects {
 		position: absolute;
 		width: 100%;
-		height: $heroHeight;
+		height: var(--heroHeight);
 		background-size: 25px 25px;
-		background-image: radial-gradient(rgba(200, 200, 200, .25) 0%, 
+		background-image: radial-gradient(rgba(200, 200, 200, .2) 0%, 
 										  rgba(0, 0, 0, 0)		   10%);
 		
 		&::after {
@@ -22,7 +24,7 @@ $heroHeight: min(90vh, 50rem);
 			position: absolute;
 			inset: 0;
 			width: 100%;
-			height: $heroHeight;
+			height: var(--heroHeight);
 		}
 	}
 	
@@ -33,7 +35,7 @@ $heroHeight: min(90vh, 50rem);
 		
 		img, video {
 			width: 100%;
-			height: $heroHeight;
+			height: var(--heroHeight);
 			opacity: 0;
 		}
 	}
@@ -86,5 +88,11 @@ $heroHeight: min(90vh, 50rem);
 			padding-inline: 1em;
 			font-size: 1.05em !important;
 		}
+	}
+}
+
+@media (max-height: 600px) {
+	:root {
+		--heroHeight: 100vh;
 	}
 }

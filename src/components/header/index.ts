@@ -28,7 +28,7 @@ export default class Header extends HTMLElement {
 		this.initBurger();
 	}
 	
-	toggleHighlights(isHighlightsEnabled: boolean) {
+	public toggleHighlights(isHighlightsEnabled: boolean) {
 		if(isHighlightsEnabled) {
 			if(this.isHighlightsInitialized) return;
 			this.initHighlight(links.map(({ url }: any) => {
@@ -42,7 +42,7 @@ export default class Header extends HTMLElement {
 		}
 	}
 	
-	watchScroll() {
+	private watchScroll() {
 		window.addEventListener('scroll', () => {
 			const headerBack = el(this, "header");
 			setClass(headerBack, "shadow", window.scrollY > 10);
@@ -57,7 +57,7 @@ export default class Header extends HTMLElement {
 		}
 	}
 	
-	initHighlight(sections: string[]) {
+	private initHighlight(sections: string[]) {
 		const views = sections.map(hash => {
 			return el(hash.substring(hash.indexOf(".ru/") + 4, hash.length));	
 		});
@@ -70,7 +70,7 @@ export default class Header extends HTMLElement {
 		});
 	}
 
-	setHighlight(id: number) {
+	private setHighlight(id: number) {
 		headerLis = els(this, 'li');
 		for(const view of headerLis) {
 			view.classList.remove("active");
@@ -78,7 +78,7 @@ export default class Header extends HTMLElement {
 		headerLis[id].classList.add("active");
 	}
 	
-	initBurger() {
+	private initBurger() {
 		const burger: HTMLElement = el("#headerBurger");
 		const outside: HTMLElement = createElement("div", {
 			class: "navigationOutside"

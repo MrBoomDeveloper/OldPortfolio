@@ -53,9 +53,6 @@ function fillScreenshotsUl(entry : Screenshot[], parent : HTMLElement, isBig : b
 	});
 	
 	function changeImageUrl({ image, ...other }: any) {
-		/* Данная функция добавляет полный путь для картинок, так как в json файле только названия файлов
-		   А еще она позволяет при клике раскрыть картинку на весь экран */
-		
 		const url = `./img/screenshots/${projectName}/${image}`;
 		image = url;
 		if(isBig) other.url = url;
@@ -76,5 +73,3 @@ function selectScreenshot(id: number) {
 		row.scrollTo(nextActive.offsetLeft - row.offsetLeft, 0);
 	}
 }
-
-

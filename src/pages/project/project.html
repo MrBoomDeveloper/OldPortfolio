@@ -15,7 +15,11 @@
 				<ul class="details"></ul>
 				<p class="description"></p>
 			</div>
-			<div class="actions"></div>
+			<div class="actions">
+				<a href="#" target="_blank" id="heroButtonDownload">
+					<boom-button class="fill">Скачать</boom-button>
+				</a>
+			</div>
 		</div>
 	</div>
 </main>
@@ -55,10 +59,10 @@
 		this.page.identifier = `project_${params.get("name") ?? "studio"}`;
 	};
 
-	(function() {
-		var d = document, s = d.createElement('script');
+	(function(d) {
+		var s = d.createElement('script');
 		s.src = 'https://mrboomdev.disqus.com/embed.js';
 		s.setAttribute('data-timestamp', + new Date());
 		(d.head || d.body).appendChild(s);
-	})();
+	})(document);
 </script>

@@ -16,7 +16,7 @@ export function fillCategories(data: any) {
 		if(i == cats.length - 1) {
 			fillProjects(Object.values(data.all));
 		} else {
-			fillProjects(array[0].content.map((item: any) => data.all[item]));
+			fillProjects(array[i].content.map((item: any) => data.all[item]));
 		}
 	
 		els("#projects .grid a").forEach((item: HTMLElement, i: number) => {
@@ -45,10 +45,11 @@ function fillProjects(obj: any) {
 		});
 		
 		function fixParams({ banner, ...other }: any) {
-			banner = banner ? `./img/large_art/${banner}.jpg` : undefined;
-			return { banner, ...other };
+			if(banner) {
+				banner = `./img/large_art/${banner}.jpg`;
+				return { banner, ...other };
+			}
+			return { ...other };
 		}
 	}
 }
-
-

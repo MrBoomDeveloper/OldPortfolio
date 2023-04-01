@@ -40,5 +40,50 @@
 			"title": "HTML",
 			"icon": "html"
 		}
-	]
+	],
+	
+	"react": {
+		"icon": "react.png",
+		"label": "React"
+	},
+	"reactNative": {
+		"icon": "react_native.png",
+		"label": "React Native"
+	},
+	"ts": {
+		"icon": "typescript.png",
+		"label": "TypeScript"
+	},
+	"sass": {
+		"icon": "sass.png",
+		"label": "SASS"
+	},
+	"webpack": {
+		"icon": "webpack.png",
+		"label": "Webpack"
+	},
+	"android": {
+		"icon": "android.png",
+		"label": "Android"
+	},
+	"gdx": {
+		"icon": "libgdx.png",
+		"label": "LibGDX"
+	},
+	"java": {
+		"icon": "java.png",
+		"label": "Java"
+	},
+	"js": {
+		"icon": "javascript.png",
+		"label": "JavaScript"
+	},
+	"css": {
+		"icon": "css.png",
+		"label": "CSS3"
+	},
+	"html": {
+		"icon": "html.png",
+		"label": "HTML5"
+	}
 }

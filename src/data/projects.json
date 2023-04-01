@@ -7,44 +7,18 @@
 			"banner": "studio",
 			"description": "Мобильный редактор кода, позволяющий использовать систему контроля версий. Во время разработки был сделан упор на максимальную мультизадачность.",
 			"link": "./project?name=studio",
-			"repo": "MrBoomDeveloper/boomstudio",
-			"screenshots": [
-				{
-					"title": "Редактор кода",
-					"image": "1.jpg"
-				}, {
-					"title": "Синхронизация с Git",
-					"image": "2.jpg"
-				}, {
-					"title": "Широкая кастомизация",
-					"image": "3.jpg"
-				}, {
-					"title": "Поддержка векторных изобркжений",
-					"image": "4.jpg"
-				}, {
-					"title": "Обзор проектов",
-					"image": "5.jpg"
-				}
-			]
+			"repo": "MrBoomDeveloper/boomstudio"
 		},
 		
 		"fnafm": {
 			"title": "FNaF Multiplayer", 
 			"highlight": "Игра Мультиплеер", 
-			"tags": "Java,JavaScript,Firebase", 
+			"tags": "ReactNative,TypeScript,Java", 
 			"banner": "fnafm",
 			"description": "Вступите в борьбу с одержимыми аниматронными машинами. Захватывающая мобильная игра в жанре экшн-платформер с любимыми персонажами. тупите в борьбу с одержимыми аниматронными машинами. Захватывающая мобильная игра в жанре экшн-платформер с любимыми персонажами. Вас ждет повышенная кастомизация своего персонажа, вдоль до коронных фраз! А огромное количество игровых режимов не заствит вас скучать.",
 			"link": "./project?name=fnafm",
 			"repo": "MrBoomDeveloper/platformer",
-			"screenshots": [
-				{
-					"title": "Геймплей",
-					"image": "1.jpg"
-				}, {
-					"title": "Логотип",
-					"image": "2.jpg"
-				}
-			]
+			"gamejolt": "670228"
 		},
 		
 		"kitchen": {
@@ -126,5 +100,3 @@
 		}
 	]
 }
-
-

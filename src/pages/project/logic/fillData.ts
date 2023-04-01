@@ -12,12 +12,12 @@ export interface Release {
 	browser_download_url: string
 }
 
-export function fillData(data: any, projectName: string) {
+export function fillData(data: any) {
 	console.log(data);
 	
 	fillHero(data, el("main"));
 	fillActions(data);
-	fillScreenshots(data.screenshots, projectName);
+	//fillScreenshots(data.screenshots, data.name);
 	fillDetails(data);
 	fillMetadata(data);
 	createElement("div", {}, {

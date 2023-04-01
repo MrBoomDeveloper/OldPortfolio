@@ -5,7 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 const isProd = process.argv[process.argv.indexOf('--mode') + 1] == "production";
 
-const pages = [ "index", "project", "terms", "404" ];
+const pages = [ "index", "project", "terms", "privacy", "404" ];
 
 const htmlPluginTemplate = {
 	title: "MrBoomDev - Фронтенд Разработчик",
